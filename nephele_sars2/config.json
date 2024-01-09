@@ -1,0 +1,14 @@
+{
+    "name": "SARS-CoV-2",
+    "version": "0.1.0",
+    "db_dir_path": "/dbs",
+    "nextflow_project_name": "nephele2_covid19",
+    "nextflow_work_dir": "/tmp/nextflow_work_dir/",
+    "mapping_file_name": "mapping_file.txt",
+    "pe_script_path": "/pipeline/workflow/main_paired_end.nf",
+    "se_script_path": "/pipeline/workflow/main_single_end.nf",
+    "artic_script_path": "/pipeline/workflow/main_artic_v2.nf",
+    "nextflow_config_path": "/pipeline/workflow/nextflow.config",
+    "sgs_dirs_to_keep": ["consensus", "filtered_snps", "filtered_indels", "reports"],
+    "artic_dirs_to_keep": ["consensus", "variant_files", "metrics", "reports", "reports_ind"]
+}

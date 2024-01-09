@@ -56,7 +56,7 @@ jobs:
 
       - name: Login to AWS ECR
         run: |
-          echo "IMG=${{ env.MGMT_ACCT_ID }}.dkr.ecr.${{ env.REG }}.amazonaws.com/nephele_pipeline_template" >> $GITHUB_ENV
+          echo "IMG=${{ env.MGMT_ACCT_ID }}.dkr.ecr.${{ env.REG }}.amazonaws.com/nephele_sars2" >> $GITHUB_ENV
           aws ecr get-login-password --region ${{ env.REG }} | docker login --username AWS --password-stdin ${{ env.MGMT_ACCT_ID }}.dkr.ecr.${{ env.REG }}.amazonaws.com
 
       - name: Build and tag Docker image
@@ -78,7 +78,7 @@ jobs:
       - name: Set latest image pointer in parameter store
         run: |
           aws ssm put-parameter \
-          --name "latest_nephele_pipeline_template_image" \
+          --name "latest_nephele_sars2_image" \
           --value "${{ env.IMG }}:${{ env.SHA }}" \
           --type String \
           --overwrite \
