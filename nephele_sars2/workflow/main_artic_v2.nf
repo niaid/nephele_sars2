@@ -336,7 +336,7 @@ process combineVariants {
 
     script:
     """
-    java -jar ${params.picardjar} MergeVcfs \
+    picard MergeVcfs \
         -I ${fsnp} \
         -I ${findel} \
         -O ${sample_id}.filt.vars.vcf \
@@ -393,7 +393,7 @@ process getMetrics {
 
     script:
     """
-    java -jar ${params.picardjar} \
+    picard \
         CollectAlignmentSummaryMetrics \
         R=${params.ref} \
         I=${trim_bam} \
@@ -401,7 +401,7 @@ process getMetrics {
 
     samtools depth -a ${trim_bam} > ${sample_id}_depth_out.txt
 
-    java -jar ${params.picardjar} \
+    picard \
         CollectAlignmentSummaryMetrics \
         R=${params.ref} \
         I=${down_bam} \
@@ -428,7 +428,7 @@ if (!params.singleEnd) {
 
         script:
         """
-        java -jar ${params.picardjar} \
+        picard \
             CollectInsertSizeMetrics \
             INPUT=${trim_bam} \
             OUTPUT=${sample_id}_insert_metrics.txt \

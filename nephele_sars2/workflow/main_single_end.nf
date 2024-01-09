@@ -134,7 +134,7 @@ process align {
 	$ref \
 	$read_1 \
 	> ${sample_id}_${pool}_aligned_reads.sam
-    java -jar ${params.picardjar} SortSam \
+    picard SortSam \
 	I=${sample_id}_${pool}_aligned_reads.sam \
 	O=${sample_id}_${pool}_aligned_reads.bam \
 	SORT_ORDER=coordinate \
@@ -159,11 +159,11 @@ process mergeBam{
     script:
     if( sams.size() == 2 )
     """
-    java -jar ${params.picardjar} MergeSamFiles \
+    picard MergeSamFiles \
 	I=${sams[0]} \
 	I=${sams[1]} \
 	O=${sample_id}_merged.bam
-    java -jar ${params.picardjar} AddOrReplaceReadGroups \
+    picard AddOrReplaceReadGroups \
 	I=${sample_id}_merged.bam \
         O=${sample_id}_fixed.bam \
         RGID=${sample_id} \
@@ -230,7 +230,7 @@ process getMetrics {
 
     script:
     """
-    java -jar ${params.picardjar} \
+    picard \
         CollectAlignmentSummaryMetrics \
 	R=${params.ref} \
         I=${sorted_dedup_reads} \
