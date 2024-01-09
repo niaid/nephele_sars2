@@ -1,0 +1,38 @@
+version: "3"
+
+tasks:
+  build_pipeline_container:
+    vars:
+      AWS_ACCESS_KEY_ID:
+        sh: aws configure get aws_access_key_id --profile nephele-mgmt-admin
+      AWS_SECRET_ACCESS_KEY:
+        sh: aws configure get aws_secret_access_key --profile nephele-mgmt-admin
+      AWS_SESSION_TOKEN:
+        sh: aws configure get aws_session_token --profile nephele-mgmt-admin
+    cmds:
+      - docker build -f Dockerfile --tag {{.CLI_ARGS}}:latest --build-arg=AWS_ACCESS_KEY_ID={{.AWS_ACCESS_KEY_ID}} --build-arg=AWS_SECRET_ACCESS_KEY={{.AWS_SECRET_ACCESS_KEY}} --build-arg=AWS_SESSION_TOKEN={{.AWS_SESSION_TOKEN}} .
+    desc: Build pipeline container. Must provide a pipeline name matching the name of the pipeline directory after the --.
+  run_pipeline_container_debug:
+    deps:
+      - build_pipeline_container
+    cmds:
+      - docker rm -f {{.CLI_ARGS}}_container || true
+      - |
+        docker run -it --name {{.CLI_ARGS}}_container \
+        --mount type=bind,source=$INPUTS_MOUNT,target=/inputs \
+        --mount type=bind,source=$OUTPUTS_MOUNT,target=/outputs \
+        --mount type=bind,source=$REF_DBS_MOUNT,target=/dbs \
+        --entrypoint bash \
+        {{.CLI_ARGS}}:latest
+  run_pipeline_container:
+    deps:
+      - build_pipeline_container
+    cmds:
+      - docker rm -f {{.CLI_ARGS}}_container || true
+      - |
+        docker run --rm --name {{.CLI_ARGS}}_container \
+        --mount type=bind,source=$INPUTS_MOUNT,target=/inputs \
+        --mount type=bind,source=$OUTPUTS_MOUNT,target=/outputs \
+        --mount type=bind,source=$REF_DBS_MOUNT,target=/dbs \
+        {{.CLI_ARGS}}:latest
+    desc: Run pipeline container. Must provide a pipeline name matching the name of the pipeline directory after the --.

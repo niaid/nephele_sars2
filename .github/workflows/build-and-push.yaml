@@ -1,0 +1,85 @@
+name: Build and Push Docker Image to AWS ECR
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Git branch to containerize"
+        required: false
+        default: "main"
+      tag:
+        description: "Docker image tag"
+        required: false
+        default: "latest"
+      env:
+        description: "Environment to deploy to"
+        required: false
+        default: "dev"
+
+jobs:
+  build-and-push:
+    runs-on: self-hosted
+
+    steps:
+      - name: Determine branch and tag (on push)
+        if: github.event_name == 'push'
+        run: |
+          echo "BRANCH=main" >> $GITHUB_ENV
+          echo "REG=us-east-1" >> $GITHUB_ENV
+          echo "ENV=dev" >> $GITHUB_ENV
+
+      - name: Determine branch and tag (on workflow_dispatch)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "BRANCH=${{ github.event.inputs.branch }}" >> $GITHUB_ENV
+          echo "ENV=${{ github.event.inputs.env }}" >> $GITHUB_ENV
+          echo "REG=us-east-1" >> $GITHUB_ENV
+
+      - name: Get SSM parameters
+        id: ssm-params
+        run: |
+          echo "MGMT_ACCT_ID=$(aws ssm get-parameter --with-decryption --name "/monarch-ro/space-accounts/mgmt" --region ${{ env.REG }} | jq -r '.["Parameter"]["Value"]')" >> $GITHUB_ENV
+          echo "DEPLOYMENT_ACCT_ID=$(aws ssm get-parameter --with-decryption --name "/monarch-ro/space-accounts/${{ env.ENV }}" --region ${{ env.REG }} | jq -r '.["Parameter"]["Value"]')" >> $GITHUB_ENV
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }}
+
+      - name: Get git SHA
+        run: |
+          echo "SHA=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Login to AWS ECR
+        run: |
+          echo "IMG=${{ env.MGMT_ACCT_ID }}.dkr.ecr.${{ env.REG }}.amazonaws.com/nephele_pipeline_template" >> $GITHUB_ENV
+          aws ecr get-login-password --region ${{ env.REG }} | docker login --username AWS --password-stdin ${{ env.MGMT_ACCT_ID }}.dkr.ecr.${{ env.REG }}.amazonaws.com
+
+      - name: Build and tag Docker image
+        run: |
+          docker build --tag ${{ env.IMG }}:${{ env.SHA }} --tag ${{ env.IMG }}:latest .
+
+      - name: Push Docker image to ECR
+        run: |
+          docker push ${{ env.IMG }}:${{ env.SHA }}
+          docker push ${{ env.IMG }}:latest
+
+      - name: Configure deployment AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::${{ env.DEPLOYMENT_ACCT_ID }}:role/cicd-runner-admin
+          aws-region: ${{ env.REG }}
+          role-duration-seconds: 3600
+
+      - name: Set latest image pointer in parameter store
+        run: |
+          aws ssm put-parameter \
+          --name "latest_nephele_pipeline_template_image" \
+          --value "${{ env.IMG }}:${{ env.SHA }}" \
+          --type String \
+          --overwrite \
+          --description "Docker image URI to use for the next deployment in ${{ env.ENV }} (${{ env.DEPLOYMENT_ACCT_ID }}) account. Branch: ${{ env.BRANCH }}"
