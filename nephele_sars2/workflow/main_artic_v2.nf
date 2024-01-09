@@ -61,7 +61,7 @@ if (params.singleEnd) {
 
         script:
         """
-        java -jar ${params.trimjar} SE \
+        trimmomatic SE \
             -phred33 \
             -threads ${task.cpus} \
             ${reads[0]} \
@@ -118,7 +118,7 @@ if (params.singleEnd) {
 
         script:
         """
-        java -jar ${params.trimjar} PE \
+        trimmomatic PE \
             -phred33 \
             -threads ${task.cpus} \
             ${reads[0]} \
@@ -230,7 +230,7 @@ process haplotypeCaller {
     script:
     hc_bamout_sample_id = sample_id + "-hc_bamout"
     """
-    java -jar ${params.gatkjar} HaplotypeCaller \
+    gatk HaplotypeCaller \
         -R $ref \
         -I $preprocessed_bam \
         -O ${sample_id}_raw_variants.vcf \
@@ -250,13 +250,13 @@ process selectVariants {
 
     script:
     """
-    java -jar ${params.gatkjar} SelectVariants \
+    gatk SelectVariants \
         -R $ref \
         -V $raw_variants \
         -select-type SNP \
         -O ${sample_id}.snps.vcf
 
-    java -jar ${params.gatkjar} SelectVariants \
+    gatk SelectVariants \
         -R $ref \
         -V $raw_variants \
         -select-type INDEL \
@@ -280,7 +280,7 @@ process filterSnps {
 
     script:
     """
-    java -jar ${params.gatkjar} VariantFiltration \
+    gatk VariantFiltration \
     -R $ref \
     -V $raw_snps \
     -O ${sample_id}.filt.snps.vcf \
@@ -307,7 +307,7 @@ process filterIndels {
 
     script:
     """
-    java -jar ${params.gatkjar} VariantFiltration \
+    gatk VariantFiltration \
         -R $ref \
         -V $raw_indels \
         -O ${sample_id}.filt.indels.vcf \
@@ -515,9 +515,9 @@ process raw_consensus {
 
     script:
     """
-    java -jar ${params.gatkjar} IndexFeatureFile -I $filtered_vars
+    gatk IndexFeatureFile -I $filtered_vars
 
-    java -jar ${params.gatkjar} FastaAlternateReferenceMaker \
+    gatk FastaAlternateReferenceMaker \
         -R $ref \
         -O ${sample_id}_raw.fasta \
         -V $filtered_vars

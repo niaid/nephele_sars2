@@ -90,7 +90,7 @@ process trim {
     // }
     trim_primer_cmd = "ILLUMINACLIP:${file(primer)}:2:30:10:8:true"
     """
-    java -jar ${params.trimjar} \
+    trimmomatic \
 	SE \
 	-phred33 \
 	-threads ${task.cpus} \
@@ -204,7 +204,7 @@ process markDuplicatesSpark  {
 
     script:
     """
-    java -jar ${params.gatkjar} \
+    gatk \
 	 MarkDuplicates \
 	-I ${bam} \
 	-M ${sample_id}_dedup_metrics.txt \
@@ -253,7 +253,7 @@ process pilon{
 
     script:
     """
-    java -Xmx16G -jar ${params.pilon} \
+    pilon \
 	--genome $ref \
 	--bam $preprocessed_bam \
 	--fix bases \
@@ -262,7 +262,7 @@ process pilon{
 	--threads ${task.cpus} \
 	--mindepth 10 \
 	--output ${sample_id}_pilon_g
-    java -jar ${params.gatkjar} SelectVariants \
+    gatk SelectVariants \
 	-V ${sample_id}_pilon_g.vcf \
 	-O ${sample_id}_pilon.vcf \
 	--exclude-non-variants \
@@ -316,7 +316,7 @@ process haplotypeCaller {
     script:
     hc_bamout_sample_id = sample_id + "-hc_bamout"
     """
-    java -jar ${params.gatkjar} HaplotypeCaller \
+    gatk HaplotypeCaller \
 	-R $ref \
 	-I $preprocessed_bam \
 	-O ${sample_id}_raw_variants.vcf \
@@ -340,12 +340,12 @@ process selectVariants {
 
     script:
     """
-    java -jar ${params.gatkjar} SelectVariants \
+    gatk SelectVariants \
 	-R $ref \
 	-V $raw_variants \
 	-select-type SNP \
 	-O ${sample_id}_raw_snps.vcf
-    java -jar ${params.gatkjar} SelectVariants \
+    gatk SelectVariants \
         -R $ref \
         -V $raw_variants \
         -select-type INDEL \
@@ -376,7 +376,7 @@ process filterSnps {
 
     script:
     """
-    java -jar ${params.gatkjar} VariantFiltration \
+    gatk VariantFiltration \
 	-R $ref \
 	-V $raw_snps \
 	-O ${sample_id}_filtered_snps.vcf \
@@ -404,7 +404,7 @@ process filterIndels {
 
     script:
     """
-    java -jar ${params.gatkjar} VariantFiltration \
+    gatk VariantFiltration \
         -R $ref \
         -V $raw_indels \
         -O ${sample_id}_filtered_indels.vcf \
@@ -431,9 +431,9 @@ process consensus {
 
     script:
     """
-    java -jar ${params.gatkjar} IndexFeatureFile \
+    gatk IndexFeatureFile \
 	-I $filtered_snps
-    java -jar ${params.gatkjar} FastaAlternateReferenceMaker \
+    gatk FastaAlternateReferenceMaker \
 	-R $ref \
 	-O ${sample_id}.fasta \
 	-V $filtered_snps
