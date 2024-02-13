@@ -11,7 +11,7 @@
 params.out = "${params.outputs_dir}"
 params.singleEnd = params.data_type=="SE" ? true : false
 // params.snpEff_config = "${params.snpeff}"
-println "inputs dir: $params.inputs_dir"
+// println "inputs dir: $params.inputs_dir"
 println "mapping file: $params.map_file"
 println "singleEnd: $params.singleEnd"
 println "outdir: $params.out"
@@ -31,11 +31,11 @@ for( line : lines ) {
         continue
     } else {
         if (params.singleEnd) {
-            pair = [row[0], [params.inputs_dir+"/"+row[1]], params.primer_file]
+            pair = [row[0], [row[1]], params.primer_file]
             pairs.add(pair)
 
         } else {
-            pair = [row[0], [params.inputs_dir+"/"+row[1], params.inputs_dir+"/"+row[2]], params.primer_file]
+            pair = [row[0], [row[1], row[2]], params.primer_file]
             pairs.add(pair)
         }
     }

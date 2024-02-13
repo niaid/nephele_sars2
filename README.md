@@ -14,78 +14,45 @@ TODO: Provide links to download these files
 ARTIC PE
 ```
 {
-    "inputs": [
+    "samples": [
         {
-            "name": "S27",
-            "files": [
-                {
-                    "path": "example-A_S27_L001_R1_001.fastq.gz",
-                    "type": "fwd"
-                },
-                {
-                    "path": "example-A_S27_L001_R2_001.fastq.gz",
-                    "type": "rev"
-                }
-
-            ],
-            "metadata": [{}],
-            "type": "fastq",
-            "source": "input"
+            "id": "S27",
+            "forward_fastq_file_path": "/inputs/example-A_S27_L001_R1_001.fastq.gz",
+            "reverse_fastq_file_path": "/inputs/example-A_S27_L001_R2_001.fastq.gz"
+        },
+        {
+            "id": "S28",
+            "forward_fastq_file_path": "/inputs/example-B_S28_L001_R1_001.fastq.gz",
+            "reverse_fastq_file_path": "/inputs/example-B_S28_L001_R2_001.fastq.gz"
         }
     ],
     "pipeline_arguments": {
         "data_type": "COVID19_PE_ARTIC",
-        "primer_reference": "v4_1.bed",
-        "ref": "refs/SARS-CoV2.fa",
-        "snpeff_data_dir": "snpeff_data"
-    },
-    "outputs": []
+        "primer_reference": "/dbs/v4_1.bed",
+        "ref": "/dbs/refs/SARS-CoV2.fa",
+        "snpeff_data_dir": "/dbs/snpeff_data"
+    }
 }
 ```
 
 SGS PE
 ```
 {
-    "inputs": [
+    "samples": [
         {
-            "name": "SRR15205494",
-            "files": [
-                {
-                    "path": "example-A_S27_L001_R1_001.fastq.gz",
-                    "type": "fwd_a"
-                },
-                {
-                    "path": "example-A_S27_L001_R2_001.fastq.gz",
-                    "type": "rev_a"
-                },
-                {
-                    "path": "example-B_S28_L001_R1_001.fastq.gz",
-                    "type": "fwd_b"
-                },
-                {
-                    "path": "example-B_S28_L001_R2_001.fastq.gz",
-                    "type": "rev_b"
-                },
-                {
-                    "path": "new_A.fa",
-                    "type": "primer_a"
-                },
-                {
-                    "path": "new_B.fa",
-                    "type": "primer_b"
-                }
-
-            ],
-            "metadata": [{}],
-            "type": "fastq",
-            "source": "input"
+            "id": "S27",
+            "forward_fastq_file_a_path": "/inputs/example-A_S27_L001_R1_001.fastq.gz",
+            "reverse_fastq_file_a_path": "/inputs/example-A_S27_L001_R2_001.fastq.gz",
+            "forward_fastq_file_b_path": "/inputs/example-B_S28_L001_R1_001.fastq.gz",
+            "reverse_fastq_file_b_path": "/inputs/example-B_S28_L001_R2_001.fastq.gz",
+            "primer_file_a": "/inputs/new_A.fa",
+            "primer_file_b": "/inputs/new_B.fa"
         }
     ],
     "pipeline_arguments": {
         "data_type": "COVID19_PE",
-        "ref": "refs/SARS-CoV2.fa",
-        "snpeff_data_dir": "snpeff_data"
-    },
-    "outputs": []
+        "ref": "/dbs/refs/SARS-CoV2.fa",
+        "snpeff_data_dir": "/dbs/snpeff_data"
+    }
 }
 ```

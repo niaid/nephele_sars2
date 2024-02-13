@@ -1,7 +1,6 @@
 {
     "name": "SARS-CoV-2",
     "version": "0.1.0",
-    "db_dir_path": "/dbs",
     "nextflow_project_name": "nephele2_covid19",
     "nextflow_work_dir": "/tmp/nextflow_work_dir/",
     "mapping_file_name": "mapping_file.txt",

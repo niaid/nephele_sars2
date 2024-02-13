@@ -1,4 +1,5 @@
 import argparse
+import csv
 import os
 import shlex
 import shutil
@@ -9,8 +10,14 @@ from pathlib import Path
 
 from config import pipeline_config
 from nephele_pipeline_utils.exceptions import NephelePipelineError
-from nephele_pipeline_utils.utils import log
-from schema import DataType, Sars2Pipeline
+from nephele_pipeline_utils.utils import log, read_json
+from schema import (
+    DataType,
+    Sars2ARTICPipelinePE,
+    Sars2ARTICPipelineSE,
+    Sars2SGSPipelinePE,
+    Sars2SGSPipelineSE,
+)
 
 
 def remove_intermediate_dirs(dname, dirs_to_keep):
@@ -31,8 +38,22 @@ def remove_intermediate_dirs(dname, dirs_to_keep):
 def main(args):
     try:
         exit_status = 0
-        pipeline = Sars2Pipeline.from_json(args.json_file_path)
+        data = read_json(args.json_file_path)
+        data_type = data.get("pipeline_arguments", {}).get("data_type", None)
+        if data_type == DataType.COVID19_PE:
+            pipeline = Sars2SGSPipelinePE(**data)
+        elif data_type == DataType.COVID19_SE:
+            pipeline = Sars2SGSPipelineSE(**data)
+        elif data_type == DataType.COVID19_PE_ARTIC:
+            pipeline = Sars2ARTICPipelinePE(**data)
+        elif data_type == DataType.COVID19_SE_ARTIC:
+            pipeline = Sars2ARTICPipelineSE(**data)
+        else:
+            raise ValueError(f"Invalid data type: {data_type}")
+        log(f"Pipeline input: {pipeline}")
+        # pipeline = Sars2Pipeline.from_json(args.json_file_path)
         args = pipeline.pipeline_arguments
+        outputs_dir_path = args.outputs_dir_path
         # check Dependencies version
         try:
             log("Dependencies:")
@@ -58,28 +79,26 @@ def main(args):
             script_name = f"{pipeline_config.artic_script_path} --data_type SE"
         log(pipeline)
         # Generate mapping file
-        mapping_file_path = (
-            pipeline_config.outputs_dir_path / pipeline_config.mapping_file_name
-        )
-        pipeline.generate_mapping_file(mapping_file_path)
+        mapping_file_path = outputs_dir_path / pipeline_config.mapping_file_name
+        pipeline.generate_mapping_file(mapping_file_path, file_name_only=False)
         # Get ref params
-        ref = pipeline_config.db_dir_path / args.ref
+        ref = args.ref
         # Get snpeff_data_dir
-        snpeff_data_dir = pipeline_config.db_dir_path / args.snpeff_data_dir
+        snpeff_data_dir = args.snpeff_data_dir
         # Command to execute the Nextflow pipeline
         command = (
             f"nextflow run -name {pipeline_config.nextflow_project_name} -c {pipeline_config.nextflow_config_path} -work-dir {pipeline_config.nextflow_work_dir} {script_name} "
-            f"--inputs_dir {pipeline_config.inputs_dir_path} --outputs_dir {pipeline_config.outputs_dir_path} --map_file {mapping_file_path} --ref {ref} --snpeff_data_dir {snpeff_data_dir}"
+            f"--outputs_dir {outputs_dir_path} --map_file {mapping_file_path} --ref {ref} --snpeff_data_dir {snpeff_data_dir}"
         )
         # For one-pool/Artic, we need to pass the primer filepath
         if args.data_type in [DataType.COVID19_PE_ARTIC, DataType.COVID19_SE_ARTIC]:
-            if args.custom_primer is True:
-                primer_file_path = (
-                    pipeline_config.inputs_dir_path / args.primer_reference
-                )
-            else:
-                primer_file_path = pipeline_config.db_dir_path / args.primer_reference
-            command += f" --primer_file {primer_file_path}"
+            # if args.custom_primer is True:
+            #     primer_file_path = (
+            #         pipeline_config.inputs_dir_path / args.primer_reference
+            #     )
+            # else:
+            #     primer_file_path = pipeline_config.db_dir_path / args.primer_reference
+            command += f" --primer_file {args.primer_reference}"
         log(command)
         # Run
         command_args = shlex.split(command)
@@ -141,7 +160,7 @@ def main(args):
                 dirs_to_keep.extend(pipeline_config.sgs_dirs_to_keep)
             else:
                 dirs_to_keep.extend(pipeline_config.artic_dirs_to_keep)
-            remove_intermediate_dirs(pipeline_config.outputs_dir_path, dirs_to_keep)
+            remove_intermediate_dirs(outputs_dir_path, dirs_to_keep)
         except Exception as e:
             log(f"Warning: clean up step error: {str(e)}")
         exit(exit_status)

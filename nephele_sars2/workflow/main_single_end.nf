@@ -13,7 +13,7 @@ params.snpEff_config = "${params.snpeff}"
 // Define modules here
 
 // println "reads: $params.reads"
-println "inputs dir: $params.inputs_dir"
+// println "inputs dir: $params.inputs_dir"
 println "mapping file: $params.map_file"
 println "ref: $params.ref"
 println "outdir: $params.out"
@@ -46,8 +46,8 @@ for( line : lines ) {
     if(row[0] == "#SampleID") {
         continue
     } else {
-        pair_A = [row[0], "A", [params.inputs_dir+"/"+row[1]], params.inputs_dir+"/"+row[3]]
-        pair_B = [row[0], "B", [params.inputs_dir+"/"+row[2]], params.inputs_dir+"/"+row[4]]
+        pair_A = [row[0], "A", [row[1]], row[3]]
+        pair_B = [row[0], "B", [row[2]], row[4]]
         pairs.add(pair_A)
         pairs.add(pair_B)
     }
