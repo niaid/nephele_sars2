@@ -15,7 +15,7 @@ RUN find /opt/conda/share -name "NexteraPE-PE.fa" -type f 2>/dev/null | xargs -I
 
 # Install nephele_pipeline_utils: aws codeartifact login --tool pip --repository nephele --domain nephele --domain-owner 566113047672 --region us-east-1
 RUN AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN} aws codeartifact login --tool pip --repository nephele --domain nephele --domain-owner 629126632555 --region us-east-1
-RUN pip install nephele_pipeline_utils
+RUN pip install nephele_pipeline_utils==0.1.5
 
 
 # Set the working directory for the pipeline

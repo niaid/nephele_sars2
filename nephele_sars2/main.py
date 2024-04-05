@@ -163,6 +163,14 @@ def main(args):
             remove_intermediate_dirs(outputs_dir_path, dirs_to_keep)
         except Exception as e:
             log(f"Warning: clean up step error: {str(e)}")
+        # Report outputs
+        try:
+            pipeline.report_outputs(
+                Path(pipeline_config.outputs_template_file_name),
+                outputs_dir_path / pipeline_config.outputs_report_file_name,
+            )
+        except Exception:
+            log(f"Warning: error reporting outputs:\n {traceback.format_exc()}")
         exit(exit_status)
 
 
