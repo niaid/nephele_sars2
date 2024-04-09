@@ -60,8 +60,12 @@ jobs:
           aws ecr get-login-password --region ${{ env.REG }} | docker login --username AWS --password-stdin ${{ env.MGMT_ACCT_ID }}.dkr.ecr.${{ env.REG }}.amazonaws.com
 
       - name: Build and tag Docker image
+        env:
+          AWS_ACCESS_KEY_ID: ${{ env.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ env.AWS_SECRET_ACCESS_KEY }}
+          AWS_SESSION_TOKEN: ${{ env.AWS_SESSION_TOKEN }}
         run: |
-          docker build --tag ${{ env.IMG }}:${{ env.SHA }} --tag ${{ env.IMG }}:latest .
+          docker build --tag ${{ env.IMG }}:${{ env.SHA }} --tag ${{ env.IMG }}:latest --secret id=AWS_ACCESS_KEY_ID --secret id=AWS_SECRET_ACCESS_KEY --secret id=AWS_SESSION_TOKEN .
 
       - name: Push Docker image to ECR
         run: |
