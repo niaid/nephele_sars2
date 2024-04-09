@@ -40,18 +40,17 @@ def main(args):
         exit_status = 0
         data = read_json(args.json_file_path)
         data_type = data.get("pipeline_arguments", {}).get("data_type", None)
-        if data_type == DataType.COVID19_PE:
+        if data_type == DataType.SGS_PE:
             pipeline = Sars2SGSPipelinePE(**data)
-        elif data_type == DataType.COVID19_SE:
+        elif data_type == DataType.SGS_SE:
             pipeline = Sars2SGSPipelineSE(**data)
-        elif data_type == DataType.COVID19_PE_ARTIC:
+        elif data_type == DataType.ARTIC_PE:
             pipeline = Sars2ARTICPipelinePE(**data)
-        elif data_type == DataType.COVID19_SE_ARTIC:
+        elif data_type == DataType.ARTIC_SE:
             pipeline = Sars2ARTICPipelineSE(**data)
         else:
             raise ValueError(f"Invalid data type: {data_type}")
         log(f"Pipeline input: {pipeline}")
-        # pipeline = Sars2Pipeline.from_json(args.json_file_path)
         args = pipeline.pipeline_arguments
         outputs_dir_path = args.outputs_dir_path
         # check Dependencies version
@@ -69,11 +68,11 @@ def main(args):
         except Exception as _:
             log("Warning: failed to check dependencies version.")
         # Select script
-        if args.data_type == DataType.COVID19_PE:
+        if args.data_type == DataType.SGS_PE:
             script_name = pipeline_config.pe_script_path
-        elif args.data_type == DataType.COVID19_SE:
+        elif args.data_type == DataType.SGS_SE:
             script_name = pipeline_config.se_script_path
-        elif args.data_type == DataType.COVID19_PE_ARTIC:
+        elif args.data_type == DataType.ARTIC_PE:
             script_name = f"{pipeline_config.artic_script_path} --data_type PE"
         else:
             script_name = f"{pipeline_config.artic_script_path} --data_type SE"
@@ -81,53 +80,21 @@ def main(args):
         # Generate mapping file
         mapping_file_path = outputs_dir_path / pipeline_config.mapping_file_name
         pipeline.generate_mapping_file(mapping_file_path, file_name_only=False)
-        # Get ref params
-        ref = args.ref
-        # Get snpeff_data_dir
-        snpeff_data_dir = args.snpeff_data_dir
+        # Get ref_db_path params
+        ref_db_path = args.ref_db_path
+        # Get snpeff_db_path
+        snpeff_db_path = args.snpeff_db_path
         # Command to execute the Nextflow pipeline
         command = (
             f"nextflow run -name {pipeline_config.nextflow_project_name} -c {pipeline_config.nextflow_config_path} -work-dir {pipeline_config.nextflow_work_dir} {script_name} "
-            f"--outputs_dir {outputs_dir_path} --map_file {mapping_file_path} --ref {ref} --snpeff_data_dir {snpeff_data_dir}"
+            f"--outputs_dir {outputs_dir_path} --map_file {mapping_file_path} --ref_db_path {ref_db_path} --snpeff_db_path {snpeff_db_path}"
         )
         # For one-pool/Artic, we need to pass the primer filepath
-        if args.data_type in [DataType.COVID19_PE_ARTIC, DataType.COVID19_SE_ARTIC]:
-            # if args.custom_primer is True:
-            #     primer_file_path = (
-            #         pipeline_config.inputs_dir_path / args.primer_reference
-            #     )
-            # else:
-            #     primer_file_path = pipeline_config.db_dir_path / args.primer_reference
-            command += f" --primer_file {args.primer_reference}"
+        if args.data_type in [DataType.ARTIC_PE, DataType.ARTIC_SE]:
+            command += f" --primer_file {args.primer_file_path}"
         log(command)
         # Run
         command_args = shlex.split(command)
-        # Only run
-        # result = subprocess.run(
-        #     command_args, stderr=subprocess.PIPE, stdout=subprocess.PIPE
-        # )
-        # log(result.stdout.decode())
-
-        # # Run and flush stdout while waiting for the process to be finished
-        # process = subprocess.Popen(
-        #     command_args,
-        #     stdout=subprocess.PIPE,
-        #     stderr=subprocess.PIPE,
-        #     text=True,
-        #     bufsize=1,
-        #     universal_newlines=True,
-        # )
-        # # Loop to continuously read and flush stdout/stderr
-        # while True:
-        #     # Read a line from stdout
-        #     stdout_line = process.stdout.readline()
-        #     if stdout_line:
-        #         # Print the line and flush the output
-        #         log(stdout_line)
-        #     else:
-        #         break  # No more output from stdout
-        # # Wait for the subprocess to complete
-        # process.wait()
 
         process = subprocess.run(command_args)
 
@@ -156,7 +123,7 @@ def main(args):
             dirs_to_keep = []
             if args.get_bam_files:
                 dirs_to_keep.append("bam_files")
-            if args.data_type in [DataType.COVID19_PE, DataType.COVID19_SE]:
+            if args.data_type in [DataType.SGS_PE, DataType.SGS_SE]:
                 dirs_to_keep.extend(pipeline_config.sgs_dirs_to_keep)
             else:
                 dirs_to_keep.extend(pipeline_config.artic_dirs_to_keep)
