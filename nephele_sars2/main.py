@@ -91,7 +91,7 @@ def main(args):
         )
         # For one-pool/Artic, we need to pass the primer filepath
         if args.data_type in [DataType.ARTIC_PE, DataType.ARTIC_SE]:
-            command += f" --primer_file {args.primer_file_path}"
+            command += f" --primer_file_path {args.primer_file_path}"
         log(command)
         # Run
         command_args = shlex.split(command)

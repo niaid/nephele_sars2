@@ -31,11 +31,11 @@ for( line : lines ) {
         continue
     } else {
         if (params.singleEnd) {
-            pair = [row[0], [row[1]], params.primer_file]
+            pair = [row[0], [row[1]], params.primer_file_path]
             pairs.add(pair)
 
         } else {
-            pair = [row[0], [row[1], row[2]], params.primer_file]
+            pair = [row[0], [row[1], row[2]], params.primer_file_path]
             pairs.add(pair)
         }
     }
@@ -183,7 +183,7 @@ process primer_trim {
 
     script:
     """
-    ivar trim -e -i ${bam} -b ${params.primer_file} -p ${sample_id}_aln_ptrim
+    ivar trim -e -i ${bam} -b ${params.primer_file_path} -p ${sample_id}_aln_ptrim
     samtools sort -o ${sample_id}_aln_ptrim_sort.bam ${sample_id}_aln_ptrim.bam
     samtools index ${sample_id}_aln_ptrim_sort.bam
     """
