@@ -15,10 +15,10 @@ params.snpEff_config = "${params.snpeff}"
 // println "reads: $params.reads"
 // println "inputs dir: $params.inputs_dir"
 println "mapping file: $params.map_file"
-println "ref_db_path: $params.ref_db_path"
+println "ref: $params.ref_db_path"
 println "outdir: $params.out"
 
-ref_db_path = file(params.ref_db_path)
+ref = file(params.ref_db_path)
 snpeff_config = file(params.snpEff_config)
 //primers = file(params.primers)
 //primers_a = file(params.primers_a)
