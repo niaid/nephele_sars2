@@ -12,7 +12,7 @@ from nephele_pipeline_utils.io import (
     Sample,
 )
 from nephele_pipeline_utils.utils import log
-from pydantic import BaseModel, FilePath, model_validator
+from pydantic import BaseModel, ConfigDict, FilePath, model_validator
 
 
 class DataType(str, Enum):
@@ -35,6 +35,7 @@ class SampleSgsPE(SampleSgsSE):
 
 
 class PipelineArgumentsSGS(PipelineArguments):
+    model_config = ConfigDict(use_enum_values=True)
     data_type: DataType
     ref_db_path: Path
     snpeff_db_path: Path
