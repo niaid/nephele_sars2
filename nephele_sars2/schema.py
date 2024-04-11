@@ -1,7 +1,4 @@
 # Schema for sars2 pipeline
-import csv
-from enum import Enum
-from pathlib import Path
 from typing import List, Optional
 
 from nephele_pipeline_utils.io import (
@@ -10,12 +7,12 @@ from nephele_pipeline_utils.io import (
     PipelinePE,
     PipelineSE,
     Sample,
+    StrEnum,
 )
-from nephele_pipeline_utils.utils import log
-from pydantic import BaseModel, ConfigDict, FilePath, model_validator
+from pydantic import DirectoryPath, FilePath
 
 
-class DataType(str, Enum):
+class DataType(StrEnum):
     SGS_PE = "SGS_PE"
     SGS_SE = "SGS_SE"
     ARTIC_PE = "ARTIC_PE"
@@ -35,10 +32,9 @@ class SampleSgsPE(SampleSgsSE):
 
 
 class PipelineArgumentsSGS(PipelineArguments):
-    model_config = ConfigDict(use_enum_values=True)
     data_type: DataType
-    ref_db_path: Path
-    snpeff_db_path: Path
+    ref_db_path: FilePath
+    snpeff_db_path: DirectoryPath
     get_bam_files: bool = False
 
 

@@ -11,6 +11,7 @@ from pathlib import Path
 from config import pipeline_config
 from nephele_pipeline_utils.exceptions import NephelePipelineError
 from nephele_pipeline_utils.utils import log, read_json
+from pydantic import ValidationError
 from schema import (
     DataType,
     Sars2ARTICPipelinePE,
@@ -38,6 +39,7 @@ def remove_intermediate_dirs(dname, dirs_to_keep):
 def main(args):
     try:
         exit_status = 0
+        report_outputs = False
         data = read_json(args.json_file_path)
         data_type = data.get("pipeline_arguments", {}).get("data_type", None)
         if data_type == DataType.SGS_PE:
@@ -49,10 +51,10 @@ def main(args):
         elif data_type == DataType.ARTIC_SE:
             pipeline = Sars2ARTICPipelineSE(**data)
         else:
-            raise ValueError(f"Invalid data type: {data_type}")
-        log(f"Pipeline input: {pipeline}")
+            raise ValidationError(f"Invalid data type: {data_type}")
         args = pipeline.pipeline_arguments
         outputs_dir_path = args.outputs_dir_path
+        report_outputs = True
         # check Dependencies version
         try:
             log("Dependencies:")
@@ -115,8 +117,6 @@ def main(args):
         error_msg = f"Pipeline Error:\n{traceback.format_exc()}"
         # explicitly writing to stderr
         print(error_msg, file=sys.stderr, flush=True)
-    else:
-        log("Pipeline completed")
     finally:
         try:
             log("Removing intermediate dirs...")
@@ -130,7 +130,9 @@ def main(args):
             remove_intermediate_dirs(outputs_dir_path, dirs_to_keep)
         except Exception as e:
             log(f"Warning: clean up step error: {str(e)}")
-        # Report outputs
+
+    # Report outputs
+    if report_outputs:
         try:
             pipeline.report_outputs(
                 Path(pipeline_config.outputs_template_file_name),
@@ -138,7 +140,11 @@ def main(args):
             )
         except Exception:
             log(f"Warning: error reporting outputs:\n {traceback.format_exc()}")
-        exit(exit_status)
+
+    if exit_status == 0:
+        log("Pipeline completed")
+
+    exit(exit_status)
 
 
 if __name__ == "__main__":
