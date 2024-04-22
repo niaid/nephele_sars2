@@ -16,7 +16,7 @@ println "mapping file: $params.map_file"
 println "singleEnd: $params.singleEnd"
 println "outdir: $params.out"
 
-ref = file(params.ref)
+ref = file(params.ref_db_path)
 
 // Reading mapping --> generate pairs of: sample ID, sequences and primer files
 map_file = file(params.map_file)
@@ -31,11 +31,11 @@ for( line : lines ) {
         continue
     } else {
         if (params.singleEnd) {
-            pair = [row[0], [row[1]], params.primer_file]
+            pair = [row[0], [row[1]], params.primer_file_path]
             pairs.add(pair)
 
         } else {
-            pair = [row[0], [row[1], row[2]], params.primer_file]
+            pair = [row[0], [row[1], row[2]], params.primer_file_path]
             pairs.add(pair)
         }
     }
@@ -183,7 +183,7 @@ process primer_trim {
 
     script:
     """
-    ivar trim -e -i ${bam} -b ${params.primer_file} -p ${sample_id}_aln_ptrim
+    ivar trim -e -i ${bam} -b ${params.primer_file_path} -p ${sample_id}_aln_ptrim
     samtools sort -o ${sample_id}_aln_ptrim_sort.bam ${sample_id}_aln_ptrim.bam
     samtools index ${sample_id}_aln_ptrim_sort.bam
     """
@@ -358,7 +358,7 @@ process snpEff{
     script:
     """
     java -jar ${params.snpeffjar} -v \
-        -c ${params.snpeff} -dataDir ${params.snpeff_data_dir} \
+        -c ${params.snpeff} -dataDir ${params.snpeff_db_path} \
         -v -no-downstream -no-upstream \
         -s ${sample_id}_snpEff_summary.html \
         ${params.snpeffref} \
@@ -395,7 +395,7 @@ process getMetrics {
     """
     picard \
         CollectAlignmentSummaryMetrics \
-        R=${params.ref} \
+        R=${params.ref_db_path} \
         I=${trim_bam} \
         O=${sample_id}_alignment_metrics.txt
 
@@ -403,7 +403,7 @@ process getMetrics {
 
     picard \
         CollectAlignmentSummaryMetrics \
-        R=${params.ref} \
+        R=${params.ref_db_path} \
         I=${down_bam} \
         O=${sample_id}_down_alignment_metrics.txt
 

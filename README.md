@@ -27,10 +27,10 @@ ARTIC PE
         }
     ],
     "pipeline_arguments": {
-        "data_type": "COVID19_PE_ARTIC",
-        "primer_reference": "/dbs/v4_1.bed",
-        "ref": "/dbs/refs/SARS-CoV2.fa",
-        "snpeff_data_dir": "/dbs/snpeff_data"
+        "data_type": "ARTIC_PE",
+        "primer_file_path": "/dbs/v4_1.bed",
+        "ref_db_path": "/dbs/refs/SARS-CoV2.fa",
+        "snpeff_db_path": "/dbs/snpeff_data"
     }
 }
 ```
@@ -45,14 +45,14 @@ SGS PE
             "reverse_fastq_file_a_path": "/inputs/example-A_S27_L001_R2_001.fastq.gz",
             "forward_fastq_file_b_path": "/inputs/example-B_S28_L001_R1_001.fastq.gz",
             "reverse_fastq_file_b_path": "/inputs/example-B_S28_L001_R2_001.fastq.gz",
-            "primer_file_a": "/inputs/new_A.fa",
-            "primer_file_b": "/inputs/new_B.fa"
+            "primer_file_a_path": "/inputs/new_A.fa",
+            "primer_file_b_path": "/inputs/new_B.fa"
         }
     ],
     "pipeline_arguments": {
-        "data_type": "COVID19_PE",
-        "ref": "/dbs/refs/SARS-CoV2.fa",
-        "snpeff_data_dir": "/dbs/snpeff_data"
+        "data_type": "SGS_PE",
+        "ref_db_path": "/dbs/refs/SARS-CoV2.fa",
+        "snpeff_db_path": "/dbs/snpeff_data"
     }
 }
 ```

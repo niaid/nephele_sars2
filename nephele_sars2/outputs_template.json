@@ -1,0 +1,16 @@
+[
+    {
+        "type": "TABLE",
+        "path": "reports/nephele2_covid19_report.csv",
+        "title": "All samples sequencing summary report",
+        "description": "A report for all samples in a run, summarizing overall sequencing metrics. Collated from individual sample alignment report table",
+        "table_separator": ","
+    },
+    {
+        "type": "TABLE",
+        "path": "reports_ind/{sample_id}_variant_effect.csv",
+        "title": "Individual sample variant effect summary ({sample_id})",
+        "description": "Individual sample variant effect summary",
+        "table_separator": ","
+    }
+]

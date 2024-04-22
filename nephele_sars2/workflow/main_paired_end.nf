@@ -15,10 +15,10 @@ params.snpEff_config = "${params.snpeff}"
 // println "reads: $params.reads"
 // println "inputs dir: $params.inputs_dir"
 println "mapping file: $params.map_file"
-println "ref: $params.ref"
+println "ref: $params.ref_db_path"
 println "outdir: $params.out"
 
-ref = file(params.ref)
+ref = file(params.ref_db_path)
 snpeff_config = file(params.snpEff_config)
 //primers = file(params.primers)
 //primers_a = file(params.primers_a)
@@ -252,7 +252,7 @@ process getMetrics {
     """
     picard \
         CollectAlignmentSummaryMetrics \
-	R=${params.ref} \
+	R=${params.ref_db_path} \
         I=${sorted_dedup_reads} \
 	O=${sample_id}_alignment_metrics.txt
     picard \
@@ -515,7 +515,7 @@ process snpEff{
     script:
     """
     java -jar ${params.snpeffjar} -v \
-        -c $snpeff_config -dataDir ${params.snpeff_data_dir} \
+        -c $snpeff_config -dataDir ${params.snpeff_db_path} \
         SARS-CoV2_NC_045512.2 \
         $snps > ${sample_id}_filtered_snps.ann.vcf
     """

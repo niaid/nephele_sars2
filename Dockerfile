@@ -1,7 +1,4 @@
 FROM condaforge/mambaforge:23.3.1-1
-ARG AWS_ACCESS_KEY_ID
-ARG AWS_SECRET_ACCESS_KEY
-ARG AWS_SESSION_TOKEN
 
 RUN apt update && apt upgrade -y
 RUN apt install -y build-essential unzip
@@ -13,9 +10,15 @@ RUN pip install pypairix
 RUN wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip -P /usr/local/src && unzip /usr/local/src/snpEff_latest_core.zip -d /usr/local/src
 RUN find /opt/conda/share -name "NexteraPE-PE.fa" -type f 2>/dev/null | xargs -I {} cp {} /usr/local/src/
 
-# Install nephele_pipeline_utils: aws codeartifact login --tool pip --repository nephele --domain nephele --domain-owner 566113047672 --region us-east-1
-RUN AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN} aws codeartifact login --tool pip --repository nephele --domain nephele --domain-owner 629126632555 --region us-east-1
-RUN pip install nephele_pipeline_utils
+# Install nephele_pipeline_utils
+RUN --mount=type=secret,id=AWS_ACCESS_KEY_ID \
+    --mount=type=secret,id=AWS_SECRET_ACCESS_KEY \
+    --mount=type=secret,id=AWS_SESSION_TOKEN \
+    AWS_ACCESS_KEY_ID=$(cat /run/secrets/AWS_ACCESS_KEY_ID) \
+    AWS_SECRET_ACCESS_KEY=$(cat /run/secrets/AWS_SECRET_ACCESS_KEY) \
+    AWS_SESSION_TOKEN=$(cat /run/secrets/AWS_SESSION_TOKEN) \
+    aws codeartifact login --tool pip --repository nephele --domain nephele --domain-owner 629126632555 --region us-east-1
+RUN pip install nephele_pipeline_utils==0.1.5
 
 
 # Set the working directory for the pipeline
