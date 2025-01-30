@@ -35,14 +35,14 @@ class ArgumentParser(NepheleArgumentParser):
                 "ReverseFastqFile_A",
                 "ReverseFastqFile_B",
                 "PrimerFile_A",
-                "PrimerFile_B"
+                "PrimerFile_B",
             ]
         elif data_type == DataType.SGS_SE:
             sample_files = [
                 "ForwardFastqFile_A",
                 "ForwardFastqFile_B",
                 "PrimerFile_A",
-                "PrimerFile_B"
+                "PrimerFile_B",
             ]
         elif data_type == DataType.ARTIC_PE:
             sample_files = ["ForwardFastqFile", "ReverseFastqFile"]
