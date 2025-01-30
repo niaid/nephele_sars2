@@ -1,5 +1,5 @@
-# Builds image and pushes to ECR in mgmt space in public registry domain.
-name: Build and Push Docker Image to AWS ECR
+# Builds base image and pushes to ECR in mgmt space in public registry domain.
+name: Build and Push Base Docker Image to AWS ECR
 
 on:
   workflow_dispatch:
@@ -8,11 +8,6 @@ on:
         description: "Git branch to containerize"
         required: true
         default: "nephele-workspace"
-      dockerfile:
-        # Dockerfile.update if only repo code is updated. Else, Dockerfile
-        description: "Docker file to use"
-        required: true
-        default: "Dockerfile.update"
       tag:
         description: "Docker image version tag"
         required: true
@@ -32,7 +27,6 @@ jobs:
         run: |
           echo "BRANCH=${{ github.event.inputs.branch }}" >> $GITHUB_ENV
           echo "IMAGE_VERSION_TAG=${{ github.event.inputs.tag }}" >> $GITHUB_ENV
-          echo "DOCKERFILE=${{ github.event.inputs.dockerfile }}" >> $GITHUB_ENV
 
       - name: Checkout code
         uses: actions/checkout@v4
@@ -45,16 +39,12 @@ jobs:
 
       - name: Login to AWS ECR
         run: |
-          echo "IMG=public.ecr.aws/niaid_nephele/pipeline/${{ env.PIPELINE }}" >> $GITHUB_ENV
+          echo "IMG=public.ecr.aws/niaid_nephele/pipeline/${{ env.PIPELINE }}_base" >> $GITHUB_ENV
           aws ecr-public get-login-password --region ${{ env.REG }} | docker login --username AWS --password-stdin public.ecr.aws/niaid_nephele
 
       - name: Build and tag Docker image
-        env:
-          AWS_ACCESS_KEY_ID: ${{ env.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ env.AWS_SECRET_ACCESS_KEY }}
-          AWS_SESSION_TOKEN: ${{ env.AWS_SESSION_TOKEN }}
         run: |
-          docker build -f ${{ env.DOCKERFILE }} --tag ${{ env.IMG }}:${{ env.SHA }} --tag ${{ env.IMG }}:${{ env.IMAGE_VERSION_TAG }} --secret id=AWS_ACCESS_KEY_ID --secret id=AWS_SECRET_ACCESS_KEY --secret id=AWS_SESSION_TOKEN .
+          docker build -f Dockerfile.base --tag ${{ env.IMG }}:${{ env.SHA }} --tag ${{ env.IMG }}:${{ env.IMAGE_VERSION_TAG }} .
 
       - name: Push Docker image to ECR
         run: |
