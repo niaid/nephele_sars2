@@ -1,0 +1,57 @@
+# Builds base image and pushes to ECR in mgmt space in public registry domain.
+name: Build and Push Base Docker Image to AWS ECR
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Git branch to containerize"
+        required: true
+        default: "nephele-workspace"
+      tag:
+        description: "Docker image version tag"
+        required: true
+        default: "latest"
+
+env:
+  PIPELINE: nephele_sars2
+  REG: us-east-1
+
+jobs:
+  build-and-push:
+    runs-on: self-hosted
+
+    steps:
+      - name: Determine branch and tag (on workflow_dispatch)
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "BRANCH=${{ github.event.inputs.branch }}" >> $GITHUB_ENV
+          echo "IMAGE_VERSION_TAG=${{ github.event.inputs.tag }}" >> $GITHUB_ENV
+          
+      - name: Get SSM parameters
+        id: ssm-params
+        run: |
+          echo "MGMT_ACCT_ID=$(aws ssm get-parameter --with-decryption --name "/monarch-ro/space-accounts/mgmt" --region ${{ env.REG }} | jq -r '.["Parameter"]["Value"]')" >> $GITHUB_ENV
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }}
+
+      - name: Get git SHA
+        run: |
+          echo "SHA=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Login to AWS ECR
+        run: |
+          echo "IMG=${{ env.MGMT_ACCT_ID }}.dkr.ecr.${{ env.REG }}.amazonaws.com/nephele_sars2" >> $GITHUB_ENV
+          aws ecr get-login-password --region ${{ env.REG }} | docker login --username AWS --password-stdin ${{ env.MGMT_ACCT_ID }}.dkr.ecr.${{ env.REG }}.amazonaws.com
+
+      - name: Build and tag Docker image
+        run: |
+          docker build -f Dockerfile.base --tag ${{ env.IMG }}:${{ env.SHA }} --tag ${{ env.IMG }}:${{ env.IMAGE_VERSION_TAG }} .
+
+      - name: Push Docker image to ECR
+        run: |
+          docker push ${{ env.IMG }}:${{ env.SHA }}
+          docker push ${{ env.IMG }}:${{ env.IMAGE_VERSION_TAG }}
