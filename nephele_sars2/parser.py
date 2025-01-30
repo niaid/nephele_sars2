@@ -59,6 +59,8 @@ class ArgumentParser(NepheleArgumentParser):
                 file_type = "fa" if "Primer" in sample_file else "fastq"
                 validate_path(file_extensions(file_type), sample[sample_file])
 
+        return samples, sample_ids
+
 
 def parse_args():
     parser = ArgumentParser()
