@@ -2,7 +2,13 @@ from argparse import ArgumentTypeError
 from pathlib import Path
 
 from nephele_pipeline_utils.parser import NepheleArgumentParser
-from nephele_pipeline_utils.types import boolean, directory, path, validate_path, file_extensions
+from nephele_pipeline_utils.types import (
+    boolean,
+    directory,
+    path,
+    validate_path,
+    file_extensions,
+)
 
 from config import pipeline_config
 from enums import DataType
@@ -24,19 +30,22 @@ class ArgumentParser(NepheleArgumentParser):
         sample_files = []
         if data_type == DataType.SGS_PE:
             sample_files = [
-                "ForwardFastqFile_A", "ForwardFastqFile_B",
-                "ReverseFastqFile_A", "ReverseFastqFile_B",
-                "PrimerFile_A", "PrimerFile_B"
+                "ForwardFastqFile_A",
+                "ForwardFastqFile_B",
+                "ReverseFastqFile_A",
+                "ReverseFastqFile_B",
+                "PrimerFile_A",
+                "PrimerFile_B"
             ]
         elif data_type == DataType.SGS_SE:
             sample_files = [
-                "ForwardFastqFile_A", "ForwardFastqFile_B",
-                "PrimerFile_A", "PrimerFile_B"
+                "ForwardFastqFile_A",
+                "ForwardFastqFile_B",
+                "PrimerFile_A",
+                "PrimerFile_B"
             ]
         elif data_type == DataType.ARTIC_PE:
-            sample_files = [
-                "ForwardFastqFile", "ReverseFastqFile"
-            ]
+            sample_files = ["ForwardFastqFile", "ReverseFastqFile"]
         elif data_type == DataType.ARTIC_SE:
             sample_files = ["ForwardFastqFile"]
 
