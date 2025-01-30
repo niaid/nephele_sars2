@@ -1,4 +1,5 @@
 # Dockerfile to create new image in case there is update to repo code only
+FROM public.ecr.aws/niaid_nephele/pipeline/nephele_sars2_base:latest
 
 # Install nephele_pipeline_utils
 RUN --mount=type=secret,id=AWS_ACCESS_KEY_ID \
