@@ -7,7 +7,7 @@ RUN apt install -y build-essential unzip
 # Install dependencies
 RUN mamba install -y -c conda-forge -c bioconda samtools~=1.18 bcftools~=1.17 trimmomatic~=0.39 bwa~=0.7 picard~=3.1 gatk4~=4.5 pilon~=1.24 bedtools~=2.31 deeptools~=3.5 pysam~=0.21 seaborn~=0.13 nextflow=22.10.6 r-base ivar~=1.4 jvarkit awscli
 RUN pip install pypairix
-RUN wget https://master.dl.sourceforge.net/project/snpeff/snpEff_v4_3_core.zip -P /usr/local/src && unzip /usr/local/src/snpEff_v4_3_core.zip -d /usr/local/src
+RUN wget https://snpeff.blob.core.windows.net/versions/snpEff_v5_2c_core.zip -P /usr/local/src && unzip /usr/local/src/snpEff_v5_2c_core.zip -d /usr/local/src
 RUN find /opt/conda/share -name "NexteraPE-PE.fa" -type f 2>/dev/null | xargs -I {} cp {} /usr/local/src/
 
 # Install nephele_pipeline_utils
