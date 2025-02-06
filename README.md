@@ -6,7 +6,7 @@ This pipeline assembles SARS-CoV-2 genome and calls mutations from Illumina sequ
 ## Datafiles
 https://main.nephele.niaiddev.net/select_or_upload_primer_file
 - ref_db_path
-  - /dbs/SARS-CoV2/refs/SARS-CoV2.fa
+  - /dbs/SARS-CoV2/refs
 - snpeff_db_path
   - /dbs/SARS-CoV2/snpeff_data
 - primer_file_path (one of the below choices)
