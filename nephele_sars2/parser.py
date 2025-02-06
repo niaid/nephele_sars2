@@ -9,6 +9,7 @@ from nephele_pipeline_utils.types import (
     validate_path,
     file_extensions,
 )
+from nephele_pipeline_utils.utils import exec_cmnd
 
 from config import pipeline_config
 from enums import DataType
@@ -23,7 +24,9 @@ class ArgumentParser(NepheleArgumentParser):
                     "primer_file_path must be provided if data_type is ARTIC."
                 )
 
-        args.ref_db_path = Path(f"{args.ref_db_path}/SARS-CoV2.fa")
+        # https://gatk.broadinstitute.org/hc/en-us/articles/360035531652-FASTA-Reference-genome-format
+        exec_cmnd(f"gatk CreateSequenceDictionary -R {args.ref_db_path}")
+        exec_cmnd(f"samtools faidx {args.ref_db_path}")
 
     def get_samples(self, args):
         samples, sample_ids = super().get_samples(args)
