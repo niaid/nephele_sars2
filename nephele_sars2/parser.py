@@ -84,7 +84,7 @@ def parse_args():
     )
     parser.add_argument(
         "--ref_db_path",
-        type=directory,
+        type=path("db"),
         required=True,
         help="ref db path.",
     )
