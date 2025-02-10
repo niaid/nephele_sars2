@@ -30,7 +30,7 @@ class ArgumentParser(NepheleArgumentParser):
         args = super().parse_args(**kwargs)
 
         # remove description from mapping file path if exists
-        fieldnames = args.samples[0].keys()
+        fieldnames = list(args.samples[0].keys())
         field_to_remove = "Description"
         if field_to_remove in fieldnames:
             fieldnames.remove(field_to_remove)
