@@ -1,4 +1,5 @@
 from argparse import ArgumentTypeError
+import csv
 from pathlib import Path
 
 from nephele_pipeline_utils.parser import NepheleArgumentParser
@@ -24,6 +25,26 @@ class ArgumentParser(NepheleArgumentParser):
                 )
 
         args.ref_db_path = Path(f"{args.ref_db_path}/SARS-CoV2.fa")
+
+    def parse_args(self, **kwargs):
+        args = super().parse_args(**kwargs)
+
+        # remove description from mapping file path if exists
+        fieldnames = args.samples[0].keys()
+        field_to_remove = "Description"
+        if field_to_remove in fieldnames:
+            fieldnames.remove(field_to_remove)
+            with open(args.mapping_file_path, "w", newline="") as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter="\t")
+                # Write the header
+                writer.writeheader()
+                # Write the data
+                for sample in args.samples:
+                    sample = sample.copy()
+                    del sample[field_to_remove]
+                    writer.writerow(sample)
+
+        return args
 
     def get_samples(self, args):
         samples, sample_ids = super().get_samples(args)
