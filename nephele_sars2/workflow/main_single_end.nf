@@ -43,7 +43,7 @@ for( line : lines ) {
         continue
     }
     row = line.split("\t")
-    if(row[0] == "#SampleID") {
+    if(row[0] == "#SampleID" || row[0] == "Description") {
         continue
     } else {
         pair_A = [row[0], "A", [row[1]], row[3]]
