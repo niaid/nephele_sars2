@@ -9,6 +9,7 @@ from nephele_pipeline_utils.types import (
     path,
     validate_path,
     file_extensions,
+    mapping_file,
 )
 
 from config import pipeline_config
@@ -126,7 +127,7 @@ def parse_args():
     )
     parser.add_argument(
         "--mapping_file_path",
-        type=path("csv"),
+        type=mapping_file,
         required=True,
         help="Input path to mapping file",
     )
