@@ -18,7 +18,7 @@ RUN --mount=type=secret,id=AWS_ACCESS_KEY_ID \
     AWS_SECRET_ACCESS_KEY=$(cat /run/secrets/AWS_SECRET_ACCESS_KEY) \
     AWS_SESSION_TOKEN=$(cat /run/secrets/AWS_SESSION_TOKEN) \
     aws codeartifact login --tool pip --repository nephele --domain nephele --domain-owner 629126632555 --region us-east-1
-RUN pip install nephele_pipeline_utils==0.1.45
+RUN pip install nephele_pipeline_utils==0.1.49
 
 
 # Set the working directory for the pipeline
