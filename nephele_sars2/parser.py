@@ -48,7 +48,7 @@ class ArgumentParser(NepheleArgumentParser):
         return args
 
     def get_samples(self):
-        samples, sample_ids = super().get_samples()
+        super().get_samples()
         data_type = self.args.data_type
 
         sample_files = []
@@ -73,7 +73,7 @@ class ArgumentParser(NepheleArgumentParser):
         elif data_type == DataType.ARTIC_SE:
             sample_files = ["ForwardFastqFile"]
 
-        for sample in samples:
+        for sample in self.args.samples:
             for sample_file in sample_files:
                 if sample_file not in sample:
                     raise ArgumentTypeError(
@@ -82,8 +82,6 @@ class ArgumentParser(NepheleArgumentParser):
 
                 file_type = "fa" if "Primer" in sample_file else "fastq"
                 validate_path(file_extensions(file_type), sample[sample_file])
-
-        return samples, sample_ids
 
 
 def parse_args():
