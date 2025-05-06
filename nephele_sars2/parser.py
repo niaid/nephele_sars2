@@ -17,8 +17,8 @@ from enums import DataType
 
 
 class ArgumentParser(NepheleArgumentParser):
-    @staticmethod
-    def validate_data(args):
+    def validate_data(self):
+        args = self.args
         if args.data_type in (DataType.ARTIC_PE, DataType.ARTIC_SE):
             if not args.primer_file_path:
                 raise ArgumentTypeError(
@@ -47,9 +47,9 @@ class ArgumentParser(NepheleArgumentParser):
 
         return args
 
-    def get_samples(self, args):
-        samples, sample_ids = super().get_samples(args)
-        data_type = args.data_type
+    def get_samples(self):
+        samples, sample_ids = super().get_samples()
+        data_type = self.args.data_type
 
         sample_files = []
         if data_type == DataType.SGS_PE:
