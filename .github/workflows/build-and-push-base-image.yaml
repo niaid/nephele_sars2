@@ -7,7 +7,7 @@ on:
       branch:
         description: "Git branch to containerize"
         required: true
-        default: "nephele-workspace"
+        default: "main"
       tag:
         description: "Docker image version tag"
         required: true

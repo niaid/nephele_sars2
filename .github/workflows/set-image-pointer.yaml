@@ -7,7 +7,7 @@ on:
       branch:
         description: "Git branch to set pointer"
         required: false
-        default: "nephele-workspace"
+        default: "main"
       env:
         description: "Environment to set image pointer to"
         required: true
