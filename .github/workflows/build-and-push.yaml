@@ -7,7 +7,7 @@ on:
       branch:
         description: "Git branch to containerize"
         required: true
-        default: "nephele-workspace"
+        default: "main"
       dockerfile:
         # Dockerfile.update if only repo code is updated. Else, Dockerfile
         description: "Docker file to use"
