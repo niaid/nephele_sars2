@@ -32,7 +32,7 @@ class ArgumentParser(NepheleArgumentParser):
 
         # discard extra metadata if exists
         fieldnames = list(args.samples[0].keys())
-        allowed_fields = ['#SampleID', 'ForwardFastqFile', 'ReverseFastqFile']
+        allowed_fields = ["#SampleID", "ForwardFastqFile", "ReverseFastqFile"]
 
         fields_to_remove = set(fieldnames) - set(allowed_fields)
         if fields_to_remove:
