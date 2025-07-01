@@ -30,11 +30,14 @@ class ArgumentParser(NepheleArgumentParser):
     def parse_args(self, **kwargs):
         args = super().parse_args(**kwargs)
 
-        # remove description from mapping file path if exists
+        # discard extra metadata if exists
         fieldnames = list(args.samples[0].keys())
-        field_to_remove = "Description"
-        if field_to_remove in fieldnames:
-            fieldnames.remove(field_to_remove)
+        allowed_fields = ["#SampleID", "ForwardFastqFile", "ReverseFastqFile"]
+
+        fields_to_remove = set(fieldnames) - set(allowed_fields)
+        if fields_to_remove:
+            for field_to_remove in fields_to_remove:
+                fieldnames.remove(field_to_remove)
             with open(args.mapping_file_path, "w", newline="") as csvfile:
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter="\t")
                 # Write the header
@@ -42,7 +45,8 @@ class ArgumentParser(NepheleArgumentParser):
                 # Write the data
                 for sample in args.samples:
                     sample = sample.copy()
-                    del sample[field_to_remove]
+                    for field_to_remove in fields_to_remove:
+                        del sample[field_to_remove]
                     writer.writerow(sample)
 
         return args
