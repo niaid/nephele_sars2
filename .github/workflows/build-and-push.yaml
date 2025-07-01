@@ -43,6 +43,11 @@ jobs:
         run: |
           echo "SHA=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
+      - name: Get Account
+        id: get_account
+        run: |
+          echo "MGMT_ACCT_ID=$(aws ssm get-parameter --with-decryption --name "/monarch-ro/space-accounts/mgmt" --region ${{ env.REG }} --query "Parameter.Value" --output text)" >> $GITHUB_ENV
+
       - name: Login to AWS ECR
         run: |
           echo "IMG=public.ecr.aws/niaid_nephele/pipeline/${{ env.PIPELINE }}" >> $GITHUB_ENV
@@ -54,7 +59,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ env.AWS_SECRET_ACCESS_KEY }}
           AWS_SESSION_TOKEN: ${{ env.AWS_SESSION_TOKEN }}
         run: |
-          docker build -f ${{ env.DOCKERFILE }} --tag ${{ env.IMG }}:${{ env.SHA }} --tag ${{ env.IMG }}:${{ env.IMAGE_VERSION_TAG }} --secret id=AWS_ACCESS_KEY_ID --secret id=AWS_SECRET_ACCESS_KEY --secret id=AWS_SESSION_TOKEN .
+          docker build -f ${{ env.DOCKERFILE }} --tag ${{ env.IMG }}:${{ env.SHA }} --tag ${{ env.IMG }}:${{ env.IMAGE_VERSION_TAG }} --secret id=AWS_ACCESS_KEY_ID --secret id=AWS_SECRET_ACCESS_KEY --secret id=AWS_SESSION_TOKEN --build-arg MGMT_ACCT_ID=${{ env.MGMT_ACCT_ID }} .
 
       - name: Push Docker image to ECR
         run: |

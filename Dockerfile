@@ -1,5 +1,7 @@
 FROM condaforge/mambaforge:23.3.1-1
 
+ARG MGMT_ACCT_ID
+
 RUN apt update && apt upgrade -y
 RUN apt install -y build-essential unzip
 # RUN DEBIAN_FRONTEND=noninteractive apt-get -y install tzdata
@@ -17,8 +19,8 @@ RUN --mount=type=secret,id=AWS_ACCESS_KEY_ID \
     AWS_ACCESS_KEY_ID=$(cat /run/secrets/AWS_ACCESS_KEY_ID) \
     AWS_SECRET_ACCESS_KEY=$(cat /run/secrets/AWS_SECRET_ACCESS_KEY) \
     AWS_SESSION_TOKEN=$(cat /run/secrets/AWS_SESSION_TOKEN) \
-    aws codeartifact login --tool pip --repository nephele --domain nephele --domain-owner 629126632555 --region us-east-1
-RUN pip install nephele_pipeline_utils==0.1.49
+    aws codeartifact login --tool pip --repository nephele_workspace --domain pypi --domain-owner ${MGMT_ACCT_ID} --region us-east-1
+RUN pip install nephele-pipeline-utils==0.1.55
 
 
 # Set the working directory for the pipeline
