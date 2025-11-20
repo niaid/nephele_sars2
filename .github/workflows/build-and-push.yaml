@@ -65,3 +65,11 @@ jobs:
         run: |
           docker push ${{ env.IMG }}:${{ env.SHA }}
           docker push ${{ env.IMG }}:${{ env.IMAGE_VERSION_TAG }}
+
+  update-ecr-metadata:
+    needs: build-and-push
+    uses: niaid/nephele_gh_actions/.github/workflows/update-ecr-metadata.yaml@main
+    with:
+      pipeline: nephele_sars2
+      description: "SARS-CoV-2 analysis pipeline for Nephele - genome assembly and mutation calling from Illumina amplicon sequencing data"
+      region: us-east-1
