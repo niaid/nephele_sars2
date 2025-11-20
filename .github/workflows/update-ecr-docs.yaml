@@ -1,0 +1,44 @@
+# Updates ECR metadata/documentation without rebuilding the image
+name: Update ECR Documentation
+
+on:
+  workflow_dispatch:
+
+env:
+  PIPELINE: nephele_sars2
+  REG: us-east-1
+
+jobs:
+  update-ecr-metadata:
+    runs-on: self-hosted-ws
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Update ECR Public Gallery metadata
+        run: |
+          # Generate JSON from markdown files
+          python3 << 'EOF'
+          import json
+          
+          with open('docs/ecr-about.md', 'r') as f:
+              about_text = f.read()
+          
+          with open('docs/ecr-usage.md', 'r') as f:
+              usage_text = f.read()
+          
+          catalog_data = {
+              "description": "SARS-CoV-2 analysis pipeline for Nephele - genome assembly and mutation calling from Illumina amplicon sequencing data",
+              "aboutText": about_text,
+              "usageText": usage_text
+          }
+          
+          with open('ecr-catalog-data.json', 'w') as f:
+              json.dump(catalog_data, f, indent=2)
+          EOF
+          
+          # Update ECR catalog
+          aws ecr-public put-repository-catalog-data \
+            --repository-name pipeline/${{ env.PIPELINE }} \
+            --catalog-data file://ecr-catalog-data.json \
+            --region ${{ env.REG }}
