@@ -1,5 +1,6 @@
 # Used to set image pointer for dev/qa/prod. Either branch or sha is required as input with workflow_dispatch.
 name: Set latest image pointer in parameter store
+run-name: Set latest image pointer in parameter store for ${{ inputs.env }} (SHA ${{ inputs.sha == '' && github.sha || inputs.sha }})
 
 on:
   workflow_dispatch:
