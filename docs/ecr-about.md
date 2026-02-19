@@ -2,6 +2,8 @@
 
 This Docker image contains the SARS-CoV-2 analysis pipeline for the Nephele microbiome analysis platform. The pipeline assembles SARS-CoV-2 genomes and calls mutations from Illumina sequence data generated using a tiled multiplexed primers strategy.
 
+If you use this image for your work, please cite Nephele and the appropriate tools. See our [Citing Nephele](https://nephele.niaid.nih.gov/about/citing-nephele) page.
+
 ## Features
 
 - **Primer Support**: Compatible with multiple primer schemes including ARTIC (V1-V5.3.2), NEB VarSkip, and IDT Midnight
