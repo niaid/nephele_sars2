@@ -1,5 +1,6 @@
 # Builds base image and pushes to ECR in mgmt space in public registry domain.
 name: Build and Push Base Docker Image to AWS ECR
+run-name: Build and Push Base Docker Image to AWS ECR (SHA ${{ github.sha }})
 
 on:
   workflow_dispatch:
