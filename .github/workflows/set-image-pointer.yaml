@@ -1,14 +1,10 @@
-# Used to set image pointer for dev/qa/prod. Either branch or sha is required as input with workflow_dispatch.
+# Used to set image pointer for dev/qa/prod.
 name: Set latest image pointer in parameter store
 run-name: Set latest image pointer in parameter store for ${{ inputs.env }} (SHA ${{ inputs.sha == '' && github.sha || inputs.sha }})
 
 on:
   workflow_dispatch:
     inputs:
-      branch:
-        description: "Git branch to set pointer"
-        required: false
-        default: "main"
       env:
         description: "Environment to set image pointer to"
         required: true
@@ -25,52 +21,11 @@ on:
         required: false
         default: ""
 
-env:
-  PIPELINE: nephele_sars2
-  REG: us-east-1
-
 jobs:
   set-image-pointer:
-    runs-on: self-hosted-ws
-
-    steps:
-      - name: Determine branch and tag (on workflow_dispatch)
-        if: github.event_name == 'workflow_dispatch'
-        run: |
-          echo "IMAGE_TAG=${{ github.event.inputs.tag }}" >> $GITHUB_ENV
-          echo "ENV=${{ github.event.inputs.env }}" >> $GITHUB_ENV
-          echo "BRANCH=${{ github.event.inputs.branch }}" >> $GITHUB_ENV
-          echo "SHA=${{ github.event.inputs.sha }}" >> $GITHUB_ENV
-
-      - name: Get SSM parameters
-        id: ssm-params
-        run: |
-          echo "DEPLOYMENT_ACCT_ID=$(aws ssm get-parameter --with-decryption --name "/monarch-ro/space-accounts/${{ env.ENV }}" --region ${{ env.REG }} | jq -r '.["Parameter"]["Value"]')" >> $GITHUB_ENV
-
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ env.BRANCH }}
-
-      - name: Get git SHA from latest commit
-        if: env.SHA == ''
-        run: echo "SHA=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-
-      - name: AWS ECR Image Location
-        run: echo "IMG=public.ecr.aws/niaid_nephele/pipeline/${{ env.PIPELINE }}" >> $GITHUB_ENV
-
-      - name: Configure deployment AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          role-to-assume: arn:aws:iam::${{ env.DEPLOYMENT_ACCT_ID }}:role/cicd-runner-admin
-          aws-region: ${{ env.REG }}
-          role-duration-seconds: 3600
-
-      - name: Set latest image pointer in parameter store
-        run: |
-          aws ssm put-parameter \
-          --name "latest_${{ env.PIPELINE }}_image" \
-          --value "${{ env.IMG }}:${{ env.SHA }}" \
-          --type String \
-          --overwrite \
-          --description "Docker image URI to use for the next deployment in ${{ env.ENV }} (${{ env.DEPLOYMENT_ACCT_ID }}) account."
+    uses: niaid/nephele_gh_actions/.github/workflows/set-image-pointer.yaml@main
+    with:
+      pipeline: nephele_sars2
+      region: us-east-1
+      env: ${{ inputs.env }}
+      sha: ${{ inputs.sha }}
