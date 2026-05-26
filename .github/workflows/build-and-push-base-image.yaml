@@ -5,49 +5,15 @@ run-name: Build and Push Base Docker Image to AWS ECR (SHA ${{ github.sha }})
 on:
   workflow_dispatch:
     inputs:
-      branch:
-        description: "Git branch to containerize"
-        required: true
-        default: "main"
       tag:
         description: "Docker image version tag"
         required: true
         default: "latest"
 
-env:
-  PIPELINE: nephele_sars2
-  REG: us-east-1
-
 jobs:
   build-and-push:
-    runs-on: self-hosted-ws
-
-    steps:
-      - name: Determine branch and tag (on workflow_dispatch)
-        if: github.event_name == 'workflow_dispatch'
-        run: |
-          echo "BRANCH=${{ github.event.inputs.branch }}" >> $GITHUB_ENV
-          echo "IMAGE_VERSION_TAG=${{ github.event.inputs.tag }}" >> $GITHUB_ENV
-
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ env.BRANCH }}
-
-      - name: Get git SHA
-        run: |
-          echo "SHA=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-
-      - name: Login to AWS ECR
-        run: |
-          echo "IMG=public.ecr.aws/niaid_nephele/pipeline/${{ env.PIPELINE }}_base" >> $GITHUB_ENV
-          aws ecr-public get-login-password --region ${{ env.REG }} | docker login --username AWS --password-stdin public.ecr.aws/niaid_nephele
-
-      - name: Build and tag Docker image
-        run: |
-          docker build -f Dockerfile.base --tag ${{ env.IMG }}:${{ env.SHA }} --tag ${{ env.IMG }}:${{ env.IMAGE_VERSION_TAG }} .
-
-      - name: Push Docker image to ECR
-        run: |
-          docker push ${{ env.IMG }}:${{ env.SHA }}
-          docker push ${{ env.IMG }}:${{ env.IMAGE_VERSION_TAG }}
+    uses: niaid/nephele_gh_actions/.github/workflows/build-and-push-base-image.yaml@main
+    with:
+      pipeline: nephele_sars2
+      tag: ${{ inputs.tag }}
+      region: us-east-1
