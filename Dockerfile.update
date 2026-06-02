@@ -1,5 +1,5 @@
 # Dockerfile to create new image in case there is update to repo code only
-FROM public.ecr.aws/niaid_nephele/pipeline/nephele_sars2_base:latest
+FROM public.ecr.aws/niaid_nephele/pipeline/nephele_sars2_base:5a51406
 
 ARG MGMT_ACCT_ID
 
