@@ -8,6 +8,7 @@ cd nephele_sars2
 mkdir -p inputs
 mkdir -p outputs
 mkdir -p dbs
+mkdir -p tmp
 ```
 
 2. Put the mapping file, and .fastq.gz files within `$(pwd)/inputs` directory. For running the image directly, the mapping file has to be tab delimited csv, the name of the sample id field has to be #SampleID, and the file names in the csv has to have input directory as prefix, such as, /inputs/22057_S2_R1_subsample.fastq.gz. Put the dbs within the dbs directory.
@@ -21,7 +22,8 @@ apptainer pull nephele_sars2.sif docker://public.ecr.aws/niaid_nephele/pipeline/
 ```
 apptainer run \
     -B $(pwd)/inputs:/inputs -B $(pwd)/outputs:/outputs -B $(pwd)/dbs:/dbs \
-    --contain --pwd /pipeline \
+    -B $(pwd)/tmp:/tmp \
+    --contain --cleanenv --pwd /pipeline \
     --writable-tmpfs \
     nephele_sars2.sif \
     --data_type ARTIC_PE \
