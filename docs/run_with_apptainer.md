@@ -1,6 +1,6 @@
 # Run with apptainer
 
-1. Create a `nephele_sars2` directory and enter the directory. And, within `nephele_sars2` directory, create inputs, outputs, and dbs directories.
+1. Create a `nephele_sars2` directory and enter the directory. And, within `nephele_sars2` directory, create inputs, outputs, dbs, and tmp directories.
 ```
 mkdir nephele_sars2
 cd nephele_sars2
@@ -11,7 +11,7 @@ mkdir -p dbs
 mkdir -p tmp
 ```
 
-2. Put the mapping file, and .fastq.gz files within `$(pwd)/inputs` directory. For running the image directly, the mapping file has to be tab delimited csv, the name of the sample id field has to be #SampleID, and the file names in the csv has to have input directory as prefix, such as, /inputs/22057_S2_R1_subsample.fastq.gz. Put the dbs within the dbs directory.
+2. Put the mapping file and .fastq.gz files within `$(pwd)/inputs` directory. For running the image directly, the mapping file has to be tab delimited csv, the name of the sample id field has to be #SampleID, and the file names in the csv has to have input directory as prefix, such as, /inputs/22057_S2_R1_subsample.fastq.gz. Put the dbs within the dbs directory.
 
 3. From within the previously created `nephele_sars2` directory, pull image.
 ```
