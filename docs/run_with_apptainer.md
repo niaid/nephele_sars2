@@ -29,6 +29,6 @@ apptainer run \
     --snpeff_db_path /dbs/SARS-CoV2/snpeff_data \
     --get_bam_files True \
     --primer_file_path /dbs/SARS-CoV2/artic_primer/neb_vss1a.primer.bed \
-    --mapping_file_path /inputs/mapping_file.csv \
+    --mapping_file_path /inputs/mapping_file.txt \
     --outputs_dir_path /outputs
 ```

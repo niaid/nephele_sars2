@@ -76,8 +76,8 @@ def main(args):
     snpeff_db_path = args.snpeff_db_path
     # Command to execute the Nextflow pipeline
     command = (
-        'CAPSULE_LOG="verbose" NXF_OPTS="-Dlog.level=DEBUG" CAPSULE_CACHE_DIR="$HOME/.nextflow_capsule_cache" '
-        f"nextflow run -name {pipeline_config.nextflow_project_name} -c {pipeline_config.nextflow_config_path} -work-dir {pipeline_config.nextflow_work_dir} {script_name} "
+        # 'CAPSULE_CACHE_DIR="$HOME/.nextflow_capsule_cache" '
+        f"nextflow -Dcapsule.log=verbose -log /dev/stdout run -name {pipeline_config.nextflow_project_name} -c {pipeline_config.nextflow_config_path} -work-dir {pipeline_config.nextflow_work_dir} {script_name} "
         f"--outputs_dir {outputs_dir_path} --map_file {args.mapping_file_path} --ref_db_path {ref_db_path} --snpeff_db_path {snpeff_db_path}"
     )
     # For one-pool/Artic, we need to pass the primer filepath
