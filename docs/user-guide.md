@@ -4,11 +4,11 @@
 
 ARTIC protocol uses a multiplexed PCR approach with two primer pools tiling the entire genome. The primer sequences are not trimmed but masked during variant calling.
 
-![ARTIC primer pool image](assets/sars2_artic_primerpool-BZoetUEs.svg)
+![ARTIC primer pool image](assets/sars2_artic_primerpool.svg)
 
 The pipeline takes as input single end or paired-end fastq files. The primer sequences for the v1-v4 ARTIC protocol are already integrated in the pipeline therefore the user simply needs to indicate which version of primers should the pipeline use. Optionally, the user can import a BED file with the primer scheme (see example in this [BED file](https://github.com/joshquick/artic-ncov2019/blob/master/primer_schemes/nCoV-2019/V4/SARS-CoV-2.scheme.bed)). The pipeline will run as indicated in the diagram shown below to produce metrics files, alignment files (BAM format), alignment coverage diagram and tables with variant calls.
 
-![SARS-CoV-2 pipeline flow image](assets/sars2_artic_flow-ULoUHsny.svg)
+![SARS-CoV-2 pipeline flow image](assets/sars2_artic_flow.svg)
 
 ### User Options
 
