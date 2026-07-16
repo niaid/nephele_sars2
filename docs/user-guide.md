@@ -131,5 +131,3 @@ The pipeline takes as input single end or paired-end fastq files. The primer seq
 - Poplin, R., Ruano-Rubio, V., DePristo, M. A., Fennell, T. J., Carneiro, M. O., Van der Auwera, G. A., ... & Banks, E. (2018). Scaling accurate genetic variant discovery to tens of thousands of samples. BioRxiv, 201178. doi:[10.1101/201178](https://www.biorxiv.org/content/10.1101/201178v3)
     
 - Grubaugh, N.D., Gangavarapu, K., Quick, J. et al. An amplicon-based sequencing framework for accurately measuring intrahost virus diversity using PrimalSeq and iVar. Genome Biol 20, 8 (2019). [https://doi.org/10.1186/s13059-018-1618-7](https://doi.org/10.1186/s13059-018-1618-7)
-### Pipeline Design and Author
-- **ARTICplus method**: Brendan Jeffrey and the [Nephele team](https://nephele.niaid.nih.gov/about/project-team)
