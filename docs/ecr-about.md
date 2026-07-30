@@ -1,6 +1,6 @@
 # About Nephele SARS-CoV-2
 
-This Docker image contains the SARS-CoV-2 analysis pipeline for the Nephele microbiome analysis platform. The pipeline has been retired from the web application.  This image is provided as is.
+This Docker image contains the SARS-CoV-2 analysis pipeline for the Nephele microbiome analysis platform. *As of August 2026, this pipeline has been retired from Nephele.*  This image is provided as is and will no longer be updated or supported by staff.
 
 The pipeline assembles SARS-CoV-2 genomes and calls mutations from Illumina sequence data generated using a tiled multiplexed primers strategy.
 

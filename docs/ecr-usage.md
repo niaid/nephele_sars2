@@ -10,7 +10,7 @@ apptainer pull nephele_sars2.sif docker://public.ecr.aws/niaid_nephele/pipeline/
 
 ## Download the data files
 
-The data files have been uploaded to [Zenodo](https://zenodo.org/records/21648025).  Download the zip archive SARS-CoV2.zip and unzip. Then:
+The data files have been depositied in [Zenodo](https://zenodo.org/records/21648025).  Download the zip archive SARS-CoV2.zip and unzip. Then:
 
 ```bash
 mkdir dbs
