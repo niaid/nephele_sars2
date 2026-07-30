@@ -76,7 +76,7 @@ Data should be in FASTQ format and all files should be saved in the same folder.
 
 ## Mapping File Format
 
-The mapping file is a tab-delimited text file that specifies sample information.  It should be placed in the same directory as the input data. The required columns depend on the data type:
+The mapping file is a tab-delimited text file that specifies sample information.  It should be placed in the same directory as the input data. The required columns depend on the data type, and the FASTQ filenames should be prefixed with `/inputs/` to denote the path within the container:
 
 ### ARTIC_PE Mapping File
 
