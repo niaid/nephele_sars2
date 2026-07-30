@@ -58,10 +58,6 @@ apptainer run \
 
 
 
-## Data Types
-
-The pipeline supports three data types:
-
 ## Input Data
 
 The pipeline supports input data types:
