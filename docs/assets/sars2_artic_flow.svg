@@ -1,0 +1,1433 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="634px"
+   height="1032px"
+   viewBox="-0.5 -0.5 634 1032"
+   content="&lt;mxfile host=&quot;app.diagrams.net&quot; modified=&quot;2021-06-02T15:03:21.020Z&quot; agent=&quot;5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15&quot; etag=&quot;fBUlOP1WWD6vHa4aKN0m&quot; version=&quot;14.7.3&quot; type=&quot;device&quot;&gt;&lt;diagram id=&quot;Wy8ZMGvK7ZTWm_sn-g0Z&quot; name=&quot;Page-1&quot;&gt;7V1bd6O2Fv41WWv6EC9AiMuj48TTaZvTaTJrpvOUpYBs08HGAziX/vojbLDRxUbciZvkIUbI2NH+9u3TlnQBJsuXjyFaL24DF/sXmuK+XIDrC01TFUsnf5KW112LYYBdwzz03LTToeHe+xdn70xbN56LI6pjHAR+7K3pRidYrbATU20oDINnutss8OlPXaM55hruHeTzrd88N17sWi2oHNp/xd58kX2yqqR3lijrnDZEC+QGz7kmcHMBJmEQxLtXy5cJ9pPBy8Zl977pkbv7LxbiVSzzhu/2Fy++ir5osfX70118+evjw/dLDe4e84T8Tfofp982fs2GALtkRNLLIIwXwTxYIf/m0Hp1aP0jCNakm0oa/8Fx/JoKFG3igDQt4qWf3iVfOnz9m1woI6DpWcN30nCpjBTFzlquEyQp+6vX9GoWrOL02er+7mcceksc4zDtFMVh8ANPAj8It/8JUBRzOiXjc8WPXTqcUbAJHXxiwFI4xyic4/hEP2vXLxm73AekkvmIA/I9w1fSIcQ+ir0nGm0oBe183+8gV/IiFW0JMeuclNWH8cPd19EMRfFPTuIEquvkJRkg5PvYD+YhWpJhW+cGmLqXG/mr54UX4/s12g7jM7EKtOBn3gvO9Hx37fs5EbkIWzNHJDzDsfDjTCD7o8J8wmGMX04Of3bXSJU0tVKZej8fVH6v2IucugOlJYGpKieUdtTwxYt3WgjTq++5OwflSy5O6t7uIRrMa7JSoMRt6CfsSz/Tt34OPPKVD8DSLQpYBqSfsPue6ZsOmBmHIXrNdVsnHaLjH8PA12Y8AfulTOtEd/Ji9/EH9O7HozqgeT+TWKDpt3cLRMc7gzFAoKfA4IR1MetZl+n0ChhGLetiDMy6mDaFGtVux7xAtZR9AbbWuX0xBPblapARzmw20xyhfXGNRwMa7dgXfWgRjsZLrHcDY5hUJkISEbUoEZFLPBowPeawTA+AjOlhgXLE9DSl76ZQ34cYT/Sj72BoAYXGS6wbfT+kOIZtSSc5yQWr1qyYKqh5ofqqdkf6aygjFdiHn9PavDNPrWmzZvUFjoPxLxVcHkBlVk+c23ATlizO2vETZSNLNlRU9dOhJVSUU/3biS15cH4hhmEZLMnAOBxOC70F7R1g8ivMNrc/Atgk17l+u59mvIbJjK7Kew0dCLyG1loaynuNZOzfuYMT3MGezMz7eq1LXw87d+2NsJfl+IUw2Kxc7KYf2IYtV2WNOdC6CRp0NqhUW+IbGCuvKeUIB6Z/O15BFbuFd9qBoh30odmmLMAWiG2IHqWn7JENs3oXm2Z35FIqJgScW9m7Jk3eN7UxISadEJjd+BB2rgqwnPWRVJN/kGqPbEM5/OjUc3UFjpR8gmu04qrYubSiBIaNsLvIXzKlfHu6AxQtrzyJQEuzNhWUqlhZjI6URbFHlkEjBpBA1czhWqumPknOSOlLRtB1ROBmMWvOD199G3NAPaNsep8l95ZNg74mdRtO1ATzNLDAxnQ2T5PFlwNK2hjHaEKh3yxtQKA90mjnR2zrSONJ5a4sCuwGzMfdlTy4B1UzpcrOLXYGWY2GLLCMahjVNeX0gxqKAllLX8BXsEFjJ3wFMN6OehxHOVU3TGlOUjes6lXcQA3NkS0I6kxzAGPstYqaI4g8E+tuMM6ibZPO0/9j35uv1IfxKEJLDtD/Peqf4dc0AVFjd8nTAJ4V/Yy8ELuk7WblchLLDfB+gUQyNi6KFltyXdnd2Yp1+TJPVpmMHoMgJsOM1qMQuV5wtYnjYJVkij56xP7nIPJiL1iRN4S7//gqGVDPIUaMub/0XHdr51CCKtLg41m+/zht3vdzFtj5cSD9CVi81ZxcwcO9qZeM2M5oWXA6Ody53yLjIuP1yI8oH6FhtQvRmmL1GK/DQUUVQEVtDSo8E3tPRpOM81lAZZ58IKaSy+ub5JcX8rb5moKX0hK8mrA52rBwpPNMQuokrobmJHpi81nF79tJ6DK1nyt3nKzfI1eOj6LIc46TjYbJ0gFGScqxIOBkI8Ycu29lkWzKUO4Ws5ViKKvHn1lYWRx/yrL7OUhAASSytrqF67ZKI1JnHiEbphomHOnw8AupxwIIRpaa++2W4tRlSh4LYH6CBYPQKAv744RXAczNPA+vjGzTGCLKM08wEJQDi7G7VVEOmQfpilzdRWNAFgT1nybjO/LC8JMg6DGkUG383CSrmrfgvYy26B2TDqqyftkCIbtPXs2Tvx/ugzC+R8tfOPU4FNkoMs53wJMBKiNDIAibtE4rsiEff/8ZujhMkuvHYcVNPSXXrMjMnuOmLG7jJXY1NIn1E+nuxTEYifG5SflIt4la81zcoOvs7JliVaFN25g902XLVTJVGIirN/QkDaGxZ+iNzLOZrBWSXEPe2MpKftK4svPnPf8tJl+euP6p5+Nf8k9M749dNwjv8NondugOI/cjiQjW/6U4QZeNE/TWbBifrW+l5qpDczouxJariyRpaY9AKMkmnA7DwesWLzGrJafz293XeDKb/xbf3Xz8a+L/XHu3t5eZj6lX5kHXt1eYCOSEYJvXimnW8g+GwD+Ix0CV9A+Nb8Aj/jqNLHCrLZIuBr7xOtJ6xosf+I/jL78LPM0tCn9cb9a+56AYn7OH0QDNkkHQc5Cs8g4mW+Q1xJUUPSWjkPYynZbkCzW9ZDFhhOdL8u/n7VlR5nOCle+y5qq61QSylVW67HLcbtIZLo9WGBBJFwmy9QmQeVBTZfgWFH7ho+UtQPwPNlWBJVQYfhe+phWmplr0v8FSxuC/K0zLCgPMcgrDziE3rTDi4C3zko2wZyUWYpWcHs6moUFefbb1iFV4tRraI8ueZdT/QLTHYEAP1NNrt6SLGLNVg3s6uLWKdKHBl9pEr/oEMDCsi56I3IEAh7VKemWzC5LRy/3QXO6ehOsKODKhQkngSNkwQ2UhBZq1YQMBDhv/VQaONjDgyOzn3W4QWS+GbIIjBJJe0JBdxdkNJtnFKrAqJnVmOYouGUM2BkIZsvNtg3AgkNFMe0QvJYJsma20IeMf1d6WjmI+ia9u4GEzEI5cjHvB0k8xR974Jn+1iDzBlih7fjyjx2/JJ3lOlLWTz9nf4rl0fn445diJjvnYibfl2Qm3cb9ZLlH4mj5cNP+bvuPTKsLhNpw53vd+fPvlzz//uBc8xcXreHHOnD6zMZMh2u7TENghS2kJU4Ll/X0oc834Qqy9iqSag4HNQfL29chU2K9o7Qfx6xpPkvmT8JwVR1Mqak57s/claeK3pDmC/VVOQnUomlNlZ4HaEqjEXPaUiNUTd/ObHtcTd5WV8g2Ku0SZ55sUtwaGJW5+luEau5v1e3nbzkMy5Dzsu7zNVDmhlFXP6AeOnUWqC/9sluvszatghbOm3DDW2gyNJlSLNiqiljbvBJ0dPKiJRD9V7Ylt11NcAWEm7Gi0s0dg2blLlt8y07nMVifvzfpRWBeoq0WbnRFSh7G9PYtUS+0CqeAdqW8Iqe0c+FEbqbALpOrvSH07SDUbT8qbQardAVI1USUHQ5FPglWEV9FGkiQ/wr19IuB+mWIULzYhPrYqaoqiGI19klSsUIzv8AwTuTv4Fv3YsnVs/0fsJodmR4InzfGKDI4TPP3yYYmiH0mxNTpnvg/YQ2PKs5LHjtmGzEDtL3YGSiu0UKwUx4alXFmnpFNoWbJ9Edo/jZdJZQ25ydLy1cjizzm6HyTT3+oioREcyOYmtMfDcjfDNopfYg6ZvEuid+Wi9t6a+cGzs0BhPHIDZ5PM92lHrMdumWgGP8aAYNWF2BSSVoYJ0Mk6tRInVTAiyyppig7MYyHUnF2oH8Y3FuwoI8s6He8INnxpjJsstjDFQY7s1HzzpqgeN8lPzaNs8pxWVNaze9sZ89N9ttPiTer5cuPH3mWm7UeUvRf1ZibIzd7dPjjfaT4g6/fBsCYCsu+dE0mInh+eUOihVayOnpwZryj/uekApnLWVASa1NY+RmKxWf06ymrTdbpOV1oXOEW5wv0mlFeWDgCNn4FSDwVVDojqZ46+TbG1fiINEydbbJFy20WiPBFzhEi5x0nh4Ned8Y7OmdNga5ikg5vWTHKlA0B7LphhiJDSPEgTSgwlbW9LhElZnkNT6TOkLFjAc9jsJEO5/nYXq7QBv4QmiQKj1Tp6DwHFYhSEgG1tIHIyFGFE5hFz4r8LLdVVlmPsW2iw54Ct/SI7uZi9AXZLl024YeNlEfUoTtH6fmZW7a8JH9uJJtg+kIGL8J7vis56uYdOb95gCQI+kS6rbLDenDL3XCFdLQcnMRsd9DW1gL6BWFDXZXVaH5ZO87zmkQQtTc2mnh+HKDll5Zw1ls3RLNH2Xd3maMpbVNmaWxQVK2Zx7tW4vomTn/0G8RliWCRI722hJWfl5bYoOOI8OmJwYP3y7f6Juub3khsM7jiGryruuAd1DTSZ41f6nGE7Rj2ZRdxT9agCyrL7A5sHN97kkizaNBRtpHMcKGWLXAuqSDuAT/NLvKoRlMyBUHYB4agzk5tM/3YIR8hPaZBQlmQX2D0b1pEGIWyIh2QqgW1VEFOLjiJsL6bmk5+9KM+HjWxFmCw/OQBh8tsYhXhN3Ig6cqInXobcqJxpaaQtOFSn29JIo5/UNU8cMSFb8dF7TRFHnYf/dvXwn94Zj54rJPo90s3DFp9Wp7mB4FCbYeUG1WM0QzahzM6mGkqIz08GkOjnZsZ7y/NlBYWmtVNWUHBgGROMotXqDGKYJoSn0smFqohOwgadSq/+gsp6jrEcGdYGPWv05Cdt9vytqjSZbfTqGPuZyOsQQa3z9qo9yjaLOGCDCoW0akgRPdk8+eS2wcIzrJ+uHx6JfX9+UB+S9aTY3Z7fg4bkLWaWg8VHkz5aMNkrt6OMV2cyXrP3KUHBYVl7eRrv8iwpT1GFVcfy5FePHfRTeRdoWYHqfQs0Sw9EAtXeBVpaoIKtzFoT6B+bv81XjKONBz6jn9j57MTwks+2aoVfVXc4yR0AoeyJrIzZ2p9qU/4ACCbWKiQ0hGNUblvBDuiLU98yJ8n9thx87dO3zQKt+Ob/TR4UHUJVG/Ew6FJ9aeWrzqIcZ004nRVA47gaM4t5oWi9i+goRLYAQUL45DIMkiOrD3FzQuDfBi5Oevwf&lt;/diagram&gt;&lt;/mxfile&gt;"
+   id="svg6729"
+   sodipodi:docname="sars2_flow_plain2.svg"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)">
+  <metadata
+     id="metadata6733">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="819"
+     id="namedview6731"
+     showgrid="false"
+     inkscape:zoom="1.161167"
+     inkscape:cx="274.39914"
+     inkscape:cy="686.84201"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg6729" />
+  <defs
+     id="defs6175">
+    <linearGradient
+       x1="110.5"
+       y1="0.5"
+       x2="110.5"
+       y2="11.5"
+       id="mx-gradient-ededed-1-dedede-1-s-0"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         style="stop-color:#EDEDED"
+         id="stop6170" />
+      <stop
+         offset="100%"
+         style="stop-color:#DEDEDE"
+         id="stop6172" />
+    </linearGradient>
+  </defs>
+  <path
+     d="m 291,171 20,-30 h 100 l -20,30 z"
+     fill="#dae8fc"
+     stroke="#6c8ebf"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path9557" />
+  <path
+     d="m 305,61 20,-30 h 80 l -20,30 z"
+     fill="#dae8fc"
+     stroke="#6c8ebf"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path9543" />
+  <path
+     id="path6177"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#007fff"
+     fill="none"
+     d="m 201,61 v 10 q 0,10 -0.12,11.73 l -0.12,1.74" />
+  <path
+     id="path6179"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#007fff"
+     fill="#007fff"
+     d="m 200.4,89.7 -3.01,-7.22 3.37,1.99 3.61,-1.51 z" />
+  <path
+     id="path6181"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#6c8ebf"
+     fill="#dae8fc"
+     d="m 151,61 20,-30 h 80 l -20,30 z" />
+  <text
+     id="text6183"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="48.5"
+     x="200.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9536">1_FW.fastq</tspan></text>
+  <text
+     id="text6219"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="48.5"
+     x="350.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9541">1_RV.fastq</tspan></text>
+  <rect
+     id="rect6233"
+     pointer-events="all"
+     stroke="#666666"
+     fill="#f5f5f5"
+     height="20"
+     width="430"
+     y="91"
+     x="61" />
+  <g
+     id="g6239"
+     transform="translate(-0.5,-0.5)">
+    <switch
+       id="switch6237">
+      <foreignObject
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+         height="100%"
+         width="100%"
+         pointer-events="none"
+         style="overflow: visible; text-align: left;">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 428px; height: 1px; padding-top: 101px; margin-left: 62px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">Trimmomatic</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         id="text6235"
+         text-anchor="middle"
+         font-size="10px"
+         font-family="Helvetica"
+         fill="#333333"
+         y="104"
+         x="276">Trimmomatic</text>
+    </switch>
+  </g>
+  <text
+     id="text6263"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="158.5"
+     x="350.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9567">Trim1_RV.fastq</tspan></text>
+  <path
+     id="path6273"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#007fff"
+     fill="none"
+     d="m 200.86,111.78 0.11,22.85" />
+  <path
+     id="path6275"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#007fff"
+     fill="#007fff"
+     d="m 200.99,139.88 -3.53,-6.98 3.51,1.73 3.49,-1.76 z" />
+  <rect
+     id="rect6277"
+     pointer-events="all"
+     stroke="#666666"
+     fill="#f5f5f5"
+     height="20"
+     width="430"
+     y="201"
+     x="61" />
+  <g
+     id="g6283"
+     transform="translate(-0.5,-0.5)">
+    <switch
+       id="switch6281">
+      <foreignObject
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+         height="100%"
+         width="100%"
+         pointer-events="none"
+         style="overflow: visible; text-align: left;">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 428px; height: 1px; padding-top: 211px; margin-left: 62px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">BWA</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         id="text6279"
+         text-anchor="middle"
+         font-size="10px"
+         font-family="Helvetica"
+         fill="#333333"
+         y="214"
+         x="276">BWA</text>
+    </switch>
+  </g>
+  <path
+     id="path6293"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#007fff"
+     fill="none"
+     d="m 201,171 -0.2,23.35" />
+  <path
+     id="path6295"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#007fff"
+     fill="#007fff"
+     d="m 200.76,199.6 -3.44,-7.03 3.48,1.78 3.52,-1.72 z" />
+  <circle
+     r="5"
+     id="ellipse6305"
+     pointer-events="all"
+     stroke="#0085fc"
+     fill="#0085fc"
+     cy="6"
+     cx="26" />
+  <circle
+     r="3"
+     id="ellipse6307"
+     pointer-events="all"
+     stroke="none"
+     fill="#ffffff"
+     cy="6"
+     cx="26" />
+  <text
+     id="text6309"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="8.5"
+     x="35.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan7052">Paired-end</tspan></text>
+  <circle
+     r="5"
+     style="fill:url(#mx-gradient-ededed-1-dedede-1-s-0)"
+     id="ellipse6315"
+     pointer-events="all"
+     stroke="#000000"
+     fill="url(#mx-gradient-ededed-1-dedede-1-s-0)"
+     cy="6"
+     cx="116" />
+  <text
+     id="text6317"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="8.5"
+     x="125.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan7057">Single-end</tspan></text>
+  <path
+     id="path6323"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#d6b656"
+     fill="#fff2cc"
+     d="m 226.85263,272.20702 20,-30 h 70 l -20,30 z" />
+  <text
+     id="text6325"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="259.70703"
+     x="271.35263"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9574">Align1.sam</tspan></text>
+  <g
+     id="g7020">
+    <path
+       d="m 270.6,220.52 0.31,14.59"
+       fill="none"
+       stroke="#ffb366"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path6335" />
+    <path
+       d="m 271.02,240.36 -3.65,-6.92 3.54,1.67 3.46,-1.82 z"
+       fill="#ffb366"
+       stroke="#ffb366"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path6337" />
+  </g>
+  <rect
+     id="rect6339"
+     pointer-events="all"
+     stroke="#666666"
+     fill="#f5f5f5"
+     height="30"
+     width="200"
+     y="301"
+     x="171" />
+  <text
+     id="text6341"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#333333"
+     y="318.5"
+     x="270.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#333333;"><tspan
+       sodipodi:role="line"
+       id="tspan7306">iVAR (primer masking)</tspan></text>
+  <path
+     id="path6355"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#d6b656"
+     fill="#fff2cc"
+     d="m 207.27478,380.91 31.00351,-29.82 h 108.51226 l -31.0035,29.82 z"
+     style="stroke-width:1.24132" />
+  <text
+     id="text6357"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="368.5"
+     x="275.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan7311">primer_masked.bam</tspan></text>
+  <path
+     id="path6363"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#ffb366"
+     fill="none"
+     d="m 271,331 -0.03,13.87" />
+  <path
+     id="path6365"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#ffb366"
+     fill="#ffb366"
+     d="m 270.96,350.12 -3.48,-7 3.49,1.75 3.51,-1.74 z" />
+  <rect
+     id="rect6367"
+     pointer-events="all"
+     stroke="#666666"
+     fill="#f5f5f5"
+     height="40"
+     width="200"
+     y="401"
+     x="171" />
+  <text
+     id="text6369"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#333333"
+     y="423.5"
+     x="270.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#333333;"><tspan
+       sodipodi:role="line"
+       id="tspan7316">jvar kit downsample</tspan></text>
+  <path
+     id="path6375"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#82b366"
+     fill="#d5e8d4"
+     d="m 179.42224,490.82214 17.49891,-29.64428 h 162.33537 l -14.48139,30.54954 z"
+     style="stroke-width:1.4904"
+     sodipodi:nodetypes="ccccc" />
+  <text
+     id="text6377"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="478.5"
+     x="270.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan7321">primer_masked_downsampled.bam</tspan></text>
+  <path
+     id="path6399"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#6c8ebf"
+     fill="#dae8fc"
+     d="m 141,171 20,-30 h 100 l -20,30 z" />
+  <text
+     id="text6401"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="158.5"
+     x="200.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9569">Trim1_FW.fastq</tspan></text>
+  <path
+     id="path6419"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#ffb366"
+     fill="none"
+     d="m 271,381 v 13.63" />
+  <path
+     id="path6421"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#ffb366"
+     fill="#ffb366"
+     d="m 271,399.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <path
+     id="path6427"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 271,441 v 13.63" />
+  <path
+     id="path6429"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 271,459.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <path
+     id="path6435"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#000000"
+     fill="none"
+     d="m 81,611 v 10 q 0,10 0,0 v -5 q 0,-5 0,1.82 v 6.81" />
+  <path
+     id="path6437"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#000000"
+     fill="#000000"
+     d="m 81,629.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <rect
+     id="rect6439"
+     pointer-events="all"
+     stroke="#666666"
+     fill="#f5f5f5"
+     height="80"
+     width="160"
+     y="531"
+     x="1" />
+  <text
+     id="text6441"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#333333"
+     y="561.5"
+     x="80.5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#333333"><tspan
+       sodipodi:role="line"
+       id="tspan7323"
+       x="80.5"
+       y="561.5">Alignment metrics</tspan><tspan
+       sodipodi:role="line"
+       id="tspan7325"
+       x="80.5"
+       y="574">Depth histogram</tspan><tspan
+       sodipodi:role="line"
+       id="tspan7327"
+       x="80.5"
+       y="586.5">Insert size metrics</tspan><tspan
+       sodipodi:role="line"
+       id="tspan7329"
+       x="80.5"
+       y="599" /></text>
+  <path
+     id="path6447"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 271,561 v 10 q 0,10 0,0 v -5 q 0,-5 0,1.82 v 6.81" />
+  <path
+     id="path6449"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 271,579.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <rect
+     id="rect6451"
+     pointer-events="all"
+     stroke="#666666"
+     fill="#f5f5f5"
+     height="30"
+     width="160"
+     y="531"
+     x="191" />
+  <path
+     id="path6459"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 271,491 v 33.63" />
+  <path
+     id="path6461"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 271,529.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <path
+     id="path6463"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 251,491 v 10 q 0,10 -10,10 H 91 q -10,0 -10,6.82 v 6.81" />
+  <path
+     id="path6465"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 81,529.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <path
+     id="path6467"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 291,491 v 10 q 0,10 10,10 h 150 q 10,0 10,6.82 v 6.81" />
+  <path
+     id="path6469"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 461,529.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <path
+     id="path6479"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke-width="2"
+     stroke="#f19c99"
+     fill="none"
+     d="m 461,611 v 35 q 0,10 5.88,10 h 5.88" />
+  <path
+     id="path6481"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke-width="2"
+     stroke="#f19c99"
+     fill="#f19c99"
+     d="m 478.76,656 -8,4 2,-4 -2,-4 z" />
+  <path
+     id="path6483"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke-width="2"
+     stroke="#f19c99"
+     fill="none"
+     d="m 461,611 v 75 q 0,10 5.88,10 h 5.88" />
+  <path
+     id="path6485"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke-width="2"
+     stroke="#f19c99"
+     fill="#f19c99"
+     d="m 478.76,696 -8,4 2,-4 -2,-4 z" />
+  <path
+     id="path6487"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke-width="1.64924"
+     stroke="#f19c99"
+     fill="none"
+     d="m 461,611 v 78.2 q 0,6.8 5.88,6.8 h 5.88" />
+  <rect
+     style="stroke-width:1.13708"
+     id="rect6495"
+     pointer-events="all"
+     stroke="#666666"
+     fill="#f5f5f5"
+     height="79.862915"
+     width="207.22905"
+     y="531.06854"
+     x="381.06854" />
+  <text
+     id="text6497"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#333333"
+     y="569.77759"
+     x="480.30768"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#333333"><tspan
+       y="569.77759"
+       x="480.30768"
+       sodipodi:role="line"
+       id="tspan9594">Consensus</tspan><tspan
+       y="582.27759"
+       x="480.30768"
+       sodipodi:role="line"
+       id="tspan9596">(built using snps and indels)</tspan></text>
+  <path
+     id="path6515"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#a680b8"
+     fill="none"
+     d="m 81,701.4 v 23.23" />
+  <path
+     id="path6517"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#a680b8"
+     fill="#a680b8"
+     d="m 81,729.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <path
+     id="path6519"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke-width="2"
+     stroke="#9673a6"
+     fill="#e1d5e7"
+     d="m 19.18,637.64 c 0,-3.67 4.07,-6.64 9.09,-6.64 h 123.64 c 5.02,0 9.09,2.97 9.09,6.64 v 53.08 c -22.66,-7 -48.25,-7 -70.91,0 -22.66,7.01 -48.25,7.01 -70.91,0 z" />
+  <path
+     id="path6521"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke-width="2"
+     stroke="#9673a6"
+     fill="#e1d5e7"
+     d="m 10.09,644.27 c 0,-1.76 0.96,-3.45 2.66,-4.69 1.71,-1.25 4.02,-1.94 6.43,-1.94 h 123.64 c 2.41,0 4.72,0.69 6.43,1.94 1.7,1.24 2.66,2.93 2.66,4.69 v 53.09 c -22.66,-7.01 -48.25,-7.01 -70.91,0 -22.66,7 -48.25,7 -70.91,0 z" />
+  <path
+     id="path6523"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke-width="2"
+     stroke="#9673a6"
+     fill="#e1d5e7"
+     d="m 1,650.91 c 0,-3.67 4.07,-6.64 9.09,-6.64 h 123.64 c 5.02,0 9.09,2.97 9.09,6.64 v 53.08 c -22.66,-7 -48.25,-7 -70.91,0 C 49.25,711 23.66,711 1,703.99 Z" />
+  <g
+     id="g6529"
+     transform="translate(-0.5,-100.5)">
+    <switch
+       id="switch6527">
+      <foreignObject
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+         height="100%"
+         width="100%"
+         pointer-events="none"
+         style="overflow: visible; text-align: left;">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 771px; margin-left: 2px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">alignment_metrics.txt<xhtml:br />
+
+insert_metrics.txt<xhtml:br />
+
+depth.txt</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         id="text6525"
+         text-anchor="middle"
+         font-size="12px"
+         font-family="Helvetica"
+         fill="#000000"
+         y="775"
+         x="81">alignment_metrics.txt...</text>
+    </switch>
+  </g>
+  <path
+     id="path6531"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 271,611 v 10 q 0,10 0,0 v -5 q 0,-5 0,1.82 v 6.81" />
+  <path
+     id="path6533"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 271,629.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <path
+     id="path6535"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#82b366"
+     fill="#d5e8d4"
+     d="m 221,611 20,-30 h 80 l -20,30 z" />
+  <g
+     id="g6541"
+     transform="translate(-0.5,-100.5)">
+    <switch
+       id="switch6539">
+      <foreignObject
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+         height="100%"
+         width="100%"
+         pointer-events="none"
+         style="overflow: visible; text-align: left;">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 696px; margin-left: 222px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">raw_variant1.vcf</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         id="text6537"
+         text-anchor="middle"
+         font-size="10px"
+         font-family="Helvetica"
+         fill="#000000"
+         y="699"
+         x="271">raw_variant1.vcf</text>
+    </switch>
+  </g>
+  <path
+     id="path6543"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 311,661 0.22,13.63" />
+  <path
+     id="path6545"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 311.3,679.88 -3.61,-6.94 3.53,1.69 3.47,-1.8 z" />
+  <path
+     id="path6547"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 231,661 v 13.63" />
+  <path
+     id="path6549"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 231,679.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <rect
+     id="rect6551"
+     pointer-events="all"
+     stroke="#666666"
+     fill="#f5f5f5"
+     height="30"
+     width="160"
+     y="631"
+     x="191" />
+  <path
+     id="path6561"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 127.12,793 7,-3.5 -1.75,3.5 1.75,3.5 z" />
+  <path
+     id="path6563"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#82b366"
+     fill="#d5e8d4"
+     d="m 181,711 20,-30 h 70 l -20,30 z" />
+  <text
+     id="text6565"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="698.5"
+     x="225.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9486">raw_snps.vcf</tspan></text>
+  <path
+     id="path6571"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#82b366"
+     fill="#d5e8d4"
+     d="m 271,711 20,-30 h 70 l -20,30 z" />
+  <text
+     id="text6573"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="698.5"
+     x="315.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9491">raw_indels.vcf</tspan></text>
+  <path
+     id="path6579"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#a680b8"
+     fill="none"
+     d="m 81,831 v 13.63" />
+  <path
+     id="path6581"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#a680b8"
+     fill="#a680b8"
+     d="m 81,849.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <rect
+     style="stroke-width:1.29284;fill:#ffffff"
+     id="rect6583"
+     pointer-events="all"
+     stroke="#666666"
+     fill="#f5f5f5"
+     height="99.862755"
+     width="150.63435"
+     y="731.0686"
+     x="1.9943012" />
+  <text
+     id="text6585"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#333333"
+     y="783.5"
+     x="80.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#333333;"><tspan
+       sodipodi:role="line"
+       id="tspan9529">QC</tspan><tspan
+       sodipodi:role="line"
+       id="tspan9531">(parse_metrics.sh)</tspan></text>
+  <path
+     id="path6591"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 311,771 h 1.85 q 1.85,0 1.84,6.94 l -0.01,6.93" />
+  <path
+     id="path6593"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 314.67,790.12 -3.49,-7 3.5,1.75 3.5,-1.74 z" />
+  <rect
+     id="rect6595"
+     pointer-events="all"
+     stroke="#666666"
+     fill="#f5f5f5"
+     height="30"
+     width="160"
+     y="741"
+     x="191" />
+  <text
+     id="text6597"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#333333"
+     y="753.59473"
+     x="270.5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#333333;"><tspan
+       sodipodi:role="line"
+       id="tspan9423">GATK</tspan><tspan
+       sodipodi:role="line"
+       id="tspan9425">(VariantFiltration)</tspan></text>
+  <path
+     id="path6603"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 311,711 v 23.63" />
+  <path
+     id="path6605"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 311,739.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <path
+     id="path6607"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 231,711 v 23.63" />
+  <path
+     id="path6609"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 231,739.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <path
+     id="path6615"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke-width="1.97313"
+     stroke="#97d077"
+     fill="none"
+     d="m 294.96229,897.78881 h 0.88091 c 0.58727,0 0.88091,2.30184 0.88091,6.90551 v 3.45276 c 0,2.30183 2.34912,3.45275 7.04732,3.45275 h 109.23331 c 4.69821,0 6.15299,-4.60378 6.21181,-13.81102 l 1.77959,-278.55271"
+     sodipodi:nodetypes="cssssssc" />
+  <path
+     id="path6617"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke-width="2"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 421,613.24 4,8 -4,-2 -4,2 z" />
+  <path
+     id="path6619"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke-width="5"
+     stroke="#82b366"
+     fill="#d5e8d4"
+     d="m 161,821 20,-30 h 90 l -20,30 z" />
+  <text
+     id="text6621"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="808.5"
+     x="215.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9496">filtered_snps.vcf</tspan></text>
+  <path
+     id="path6627"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke-width="5"
+     stroke="#82b366"
+     fill="#d5e8d4"
+     d="m 271,821 20,-30 h 90 l -20,30 z" />
+  <g
+     id="g6633"
+     transform="translate(-0.5,-100.5)">
+    <switch
+       id="switch6631">
+      <foreignObject
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+         height="100%"
+         width="100%"
+         pointer-events="none"
+         style="overflow: visible; text-align: left;">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 906px; margin-left: 272px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">filtered_indels1.vcf</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         id="text6629"
+         text-anchor="middle"
+         font-size="10px"
+         font-family="Helvetica"
+         fill="#000000"
+         y="909"
+         x="326">filtered_indels1.vcf</text>
+    </switch>
+  </g>
+  <path
+     id="path6635"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke-width="5"
+     stroke="#9673a6"
+     fill="#e1d5e7"
+     d="m 126,851 c 2.76,0 5,2.24 5,5 v 47.5 q -25,-13.5 -50,0 -25,13.5 -50,0 v -45 -2.5 c 0,-2.76 2.24,-5 5,-5 z" />
+  <g
+     id="g6641"
+     transform="translate(-0.5,-100.5)">
+    <switch
+       id="switch6639">
+      <foreignObject
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+         height="100%"
+         width="100%"
+         pointer-events="none"
+         style="overflow: visible; text-align: left;">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 981px; margin-left: 32px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">report1.csv</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         id="text6637"
+         text-anchor="middle"
+         font-size="12px"
+         font-family="Helvetica"
+         fill="#000000"
+         y="985"
+         x="81">report1.csv</text>
+    </switch>
+  </g>
+  <path
+     id="path6643"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 231,771 v 14.11" />
+  <path
+     id="path6645"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 231,790.36 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <path
+     id="path6647"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="m 271,941 v 10 q 0,10 0,0 v -5 q 0,-5 0,1.82 v 6.81" />
+  <path
+     id="path6649"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 271,959.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <rect
+     id="rect6651"
+     pointer-events="all"
+     stroke="#666666"
+     fill="#f5f5f5"
+     height="30"
+     width="160"
+     y="917"
+     x="191" />
+  <g
+     id="g6657"
+     transform="translate(-0.5,-34.5)">
+    <switch
+       id="switch6655">
+      <foreignObject
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+         height="100%"
+         width="100%"
+         pointer-events="none"
+         style="overflow: visible; text-align: left;">
+        <xhtml:div
+           style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 966px; margin-left: 192px;">
+          <xhtml:div
+             style="box-sizing: border-box; font-size: 0; text-align: center; ">
+            <xhtml:div
+               style="display: inline-block; font-size: 10px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">snpEff</xhtml:div>
+          </xhtml:div>
+        </xhtml:div>
+      </foreignObject>
+      <text
+         id="text6653"
+         text-anchor="middle"
+         font-size="10px"
+         font-family="Helvetica"
+         fill="#333333"
+         y="969"
+         x="271">snpEff</text>
+    </switch>
+  </g>
+  <path
+     id="path6659"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#82b366"
+     fill="#d5e8d4"
+     d="m 206,991 20,-30 h 110 l -20,30 z" />
+  <text
+     id="text6661"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="978.5"
+     x="270.5"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9477">filtered_vars.ann.vcf</tspan></text>
+  <path
+     id="path6675"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke-width="5"
+     stroke="#b85450"
+     fill="#f8cecc"
+     d="m 471,671 20,-30 h 140 l -20,30 z" />
+  <text
+     id="text6677"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="658.5"
+     x="550.5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9481">ID_below_10_masked.fasta</tspan></text>
+  <path
+     id="path6683"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke-width="5"
+     stroke="#b85450"
+     fill="#f8cecc"
+     d="m 471,711 20,-30 h 140 l -20,30 z" />
+  <text
+     id="text6685"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#000000"
+     y="698.5"
+     x="550.5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9479">ID_below_20_masked.fasta</tspan></text>
+  <path
+     id="path6707"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#000000"
+     fill="none"
+     d="m 461,481 v 25 h 17 l -0.03,19.67" />
+  <path
+     id="path6709"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#000000"
+     fill="#000000"
+     d="m 477.96,530.92 -3.49,-7 3.5,1.75 3.5,-1.74 z" />
+  <path
+     id="path6711"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#666666"
+     fill="#f5f5f5"
+     d="m 401,481 20,-50 h 100 l -20,50 z" />
+  <text
+     id="text6713"
+     text-anchor="middle"
+     font-size="12px"
+     font-family="Helvetica"
+     fill="#333333"
+     y="449.5"
+     x="458.5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#333333"><tspan
+       sodipodi:role="line"
+       id="tspan9516"
+       x="458.5"
+       y="449.5">Reference</tspan><tspan
+       sodipodi:role="line"
+       id="tspan9518"
+       x="458.5"
+       y="466.16663">(NC_045512.2)</tspan></text>
+  <switch
+     id="switch6727">
+    <g
+       requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+       id="g6721" />
+    <a
+       transform="translate(0,-5)"
+       xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems"
+       target="_blank"
+       id="a6725">
+      <text
+         text-anchor="middle"
+         font-size="10px"
+         x="50%"
+         y="100%"
+         id="text6723">Viewer does not support full SVG 1.1</text>
+    </a>
+  </switch>
+  <g
+     id="g7026"
+     transform="translate(0,56)">
+    <path
+       id="path7022"
+       pointer-events="stroke"
+       stroke-miterlimit="10"
+       stroke="#ffb366"
+       fill="none"
+       d="m 270.6,220.52 0.31,14.59" />
+    <path
+       id="path7024"
+       pointer-events="all"
+       stroke-miterlimit="10"
+       stroke="#ffb366"
+       fill="#ffb366"
+       d="m 271.02,240.36 -3.65,-6.92 3.54,1.67 3.46,-1.82 z" />
+  </g>
+  <path
+     d="m 271,821 20,-30 h 90 l -20,30 z"
+     fill="#d5e8d4"
+     stroke="#82b366"
+     stroke-width="5"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path9390" />
+  <path
+     d="m 206,903 20,-30 h 110 l -20,30 z"
+     fill="#d5e8d4"
+     stroke="#82b366"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path9392" />
+  <path
+     d="m 271,839 v 26.50018"
+     fill="none"
+     stroke="#97d077"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path9394"
+     style="stroke-width:1.05899" />
+  <path
+     d="m 271,869.88 -3.5,-7 3.5,1.75 3.5,-1.75 z"
+     fill="#97d077"
+     stroke="#97d077"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path9396" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#333333"
+     x="270.5"
+     y="643.59473"
+     fill="#333333"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="text9411"><tspan
+       y="643.59473"
+       x="270.5"
+       id="tspan9407"
+       sodipodi:role="line">GATK</tspan><tspan
+       y="656.09473"
+       x="270.5"
+       id="tspan9409"
+       sodipodi:role="line">(SelectVariants)</tspan></text>
+  <text
+     id="text9417"
+     text-anchor="middle"
+     font-size="10px"
+     font-family="Helvetica"
+     fill="#333333"
+     y="541.59473"
+     x="270.5"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#333333;"><tspan
+       sodipodi:role="line"
+       id="tspan9419">GATK</tspan><tspan
+       sodipodi:role="line"
+       id="tspan9421">(HaplotypeCaller)</tspan></text>
+  <text
+     x="271.5"
+     y="890.5"
+     fill="#000000"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="text9440"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000"><tspan
+       sodipodi:role="line"
+       id="tspan9449"
+       x="271.5"
+       y="890.5">filtered_vars.vcf</tspan></text>
+  <path
+     id="path9453"
+     pointer-events="all"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="#97d077"
+     d="m 271,913.88 -3.5,-7 3.5,1.75 3.5,-1.75 z" />
+  <text
+     x="325.5"
+     y="808.5"
+     fill="#000000"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="text9463"
+     style="-inkscape-font-specification:'Helvetica, Normal';font-family:Helvetica;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-size:10px;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;"><tspan
+       sodipodi:role="line"
+       id="tspan9472">filtered_indels.vcf</tspan></text>
+  <path
+     d="m 347,61 v 10 q 0,10 -0.12,11.73 l -0.12,1.74"
+     fill="none"
+     stroke="#007fff"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path9545" />
+  <path
+     d="m 346.4,89.7 -3.01,-7.22 3.37,1.99 3.61,-1.51 z"
+     fill="#007fff"
+     stroke="#007fff"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path9547" />
+  <path
+     d="m 346.86,111.78 0.11,22.85"
+     fill="none"
+     stroke="#007fff"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path9549" />
+  <path
+     d="m 346.99,139.88 -3.53,-6.98 3.51,1.73 3.49,-1.76 z"
+     fill="#007fff"
+     stroke="#007fff"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path9551" />
+  <path
+     d="m 347,171 -0.2,23.35"
+     fill="none"
+     stroke="#007fff"
+     stroke-miterlimit="10"
+     pointer-events="stroke"
+     id="path9553" />
+  <path
+     d="m 346.76,199.6 -3.44,-7.03 3.48,1.78 3.52,-1.72 z"
+     fill="#007fff"
+     stroke="#007fff"
+     stroke-miterlimit="10"
+     pointer-events="all"
+     id="path9555" />
+  <path
+     style="stroke-width:0.726063"
+     id="path11378"
+     pointer-events="stroke"
+     stroke-miterlimit="10"
+     stroke="#97d077"
+     fill="none"
+     d="M 271,903.42299 V 915.88" />
+  <path
+     style="fill:none;fill-opacity:0.996078;stroke:#95d077;stroke-width:0.943695px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.956863"
+     d="m 137.98822,830.07014 c 49.18138,40.03464 -32.75638,53.29244 81.35082,52.42582"
+     id="path11380"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 212.02781,823.12137 -0.30449,20.09575 H 233.037 l 82.81886,1.82689 26.79434,-0.30448 v -21.61816"
+     id="path11382" />
+  <rect
+     x="232.23349"
+     y="836.65192"
+     width="82.578117"
+     height="17.756195"
+     fill="#f5f5f5"
+     stroke="#666666"
+     pointer-events="all"
+     id="rect9398"
+     style="stroke-width:1.153;stroke-miterlimit:10;stroke-dasharray:none;fill:#ffffff;stroke:#666666;fill-opacity:1;stroke-opacity:1" />
+  <text
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.49493000000000009px;font-family:Helvetica;-inkscape-font-specification:'Helvetica, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;fill:#000000;stroke-width:0.949493;fill-opacity:1;"
+     x="269.13068"
+     y="859.91449"
+     fill="#333333"
+     font-family="Helvetica"
+     font-size="10px"
+     text-anchor="middle"
+     id="text9431"
+     transform="scale(1.0139954,0.98619776)"><tspan
+       sodipodi:role="line"
+       id="tspan9433"
+       x="269.13068"
+       y="859.91449"
+       style="fill:#000000;stroke-width:0.949493;fill-opacity:1;">Picard MergeVcf</tspan></text>
+</svg>
