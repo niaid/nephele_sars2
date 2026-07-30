@@ -92,7 +92,7 @@ sample2	/inputs/sample2.fastq.gz
 
 ## Required Arguments
 
-- `--data_type`: Data type - must be `ARTIC_PE`, `ARTIC_SE`, `SGS_PE`, or `SGS_SE`
+- `--data_type`: Data type - must be `ARTIC_PE`, `ARTIC_SE`
 - `--mapping_file_path`: Path to tab-delimited mapping file
 - `--ref_db_path`: Path to directory containing SARS-CoV-2 reference genome (will use `SARS-CoV2.fa`)
 - `--snpeff_db_path`: Path to SnpEff annotation database directory
