@@ -8,3 +8,5 @@ This pipeline is now retired from the Nephele platform.  We provide the code and
 - [Docker image](https://gallery.ecr.aws/niaid_nephele/pipeline/nephele_sars2) for running the pipeline locally
 - [Pipeline data files](https://zenodo.org/records/21648025)
 
+The SARS-CoV-2 pipeline was developed by the [Bioinformatics and Computational Biosciences Branch](https://www.niaid.nih.gov/research/bcbb-leadership), Office of Cyber Infrastructure and Computational Biology, NIAID/NIH.  Contact: Michael Dolan, [dolanmi@mail.nih.gov](mailto:dolanmi@mail.nih.gov).
+
